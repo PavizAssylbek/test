@@ -1,0 +1,22 @@
+.sidebar {
+  grid-area: sidebar;
+  width: 6%;
+  min-height: 100vh;
+  padding: 55px 32px 0;
+  background-color: var(--color-blue);
+}
+
+.sidebar_content {
+  height: 90%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar_content img {
+  margin-bottom: 65px;
+}
+
+.sidebar_content img:last-child {
+  margin-bottom: 0;
+  margin-top: auto;
+}

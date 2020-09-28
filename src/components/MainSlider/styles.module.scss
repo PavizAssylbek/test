@@ -1,0 +1,29 @@
+.main_slider {
+  padding-bottom: 45px;
+  position: relative;
+
+  h1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 69px;
+    b {
+      font-weight: bold;
+    }
+  }
+
+  &_img {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    object-fit: contain;
+  }
+
+  &_flex {
+    display: flex;
+    div {
+      margin-right: 30px;
+    }
+  }
+}
+  
