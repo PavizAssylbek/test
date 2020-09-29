@@ -27,6 +27,9 @@ function Header() {
 
   React.useEffect(() => {
     document.body.addEventListener('click', handleOutsideClick)
+    return () => {
+      document.body.removeEventListener('click', handleOutsideClick)
+    }
   }, [])
 
   const onSelectItem = id => {

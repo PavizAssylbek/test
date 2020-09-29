@@ -1,0 +1,18 @@
+.main_slider_img {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  object-fit: contain;
+}
+
+.main_slider_line {
+  animation: dash .3s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
