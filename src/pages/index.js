@@ -1,33 +1,28 @@
 import React from 'react'
 import Head from 'next/head'
-import Sidebar from '../components/Sidebar'
-import Header from '../components/Header'
+import MainLayout from '../components/MainLayout'
 import MainSlider from '../components/MainSlider'
 import MainNews from '../components/MainNews'
 import MainProject from '../components/MainProject'
+import MainWebinars from '../components/MainWebinars'
 
 
 export default function Home() {
   return (
-    <div className="home">
+    <MainLayout>
       <Head>
         <title>Tourism</title>
       </Head>
 
-      <main className="flex">
-        <Sidebar />
-        <div className="content">
-          <Header />
+      <MainSlider />
 
-          <MainSlider />
+      <MainNews />
 
-          <MainNews />
+      <MainProject />
 
-          <MainProject />
+      <MainWebinars />
           
-        </div>
-      </main>
 
-    </div>
+    </MainLayout>
   )
 }

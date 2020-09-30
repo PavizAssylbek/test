@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import Sidebar from '../components/Sidebar'
-import Header from '../components/Header'
+import MainLayout from '../components/MainLayout'
 
 import ProjectContent from '../components/ProjectContent'
 
@@ -9,23 +8,17 @@ import ProjectContent from '../components/ProjectContent'
 export default function Project() {
 
   return (
-    <div className="news">
+    <MainLayout>
       <Head>
         <title>Tourism: Project</title>
       </Head>
 
-      <main className="flex">
-        <Sidebar />
-        <div className="content">
-          <Header />
           
-          <div className="flex">
-            <ProjectContent />
-          </div>
+      <div className="flex">
+        <ProjectContent />
+      </div>
           
-        </div>
-      </main>
-    </div>
+    </MainLayout>
   )
 
 }

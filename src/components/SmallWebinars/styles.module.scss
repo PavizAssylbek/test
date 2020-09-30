@@ -1,0 +1,77 @@
+.smallwebinars {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 480px;
+  height: 414px;
+  padding: 25px 22px 35px 30px;
+  background-color: var(--color-blue);
+  z-index: -1;
+
+  &:nth-child(even) {
+    background-color: #2FCFD7;
+  }
+
+  &_img {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  &_content {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+
+    div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      &:nth-child(2) {
+        margin-bottom: 60px;
+      }
+
+      img {
+        margin-right: 10px;
+      }
+
+      span {
+        color: #fff;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &_finish {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  &_text {
+    margin: 0;
+    color: #fff;
+    width: 340px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 25px;
+  }
+}

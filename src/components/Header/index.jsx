@@ -54,8 +54,8 @@ function Header() {
         <Link href="/project">
           <a className={router.pathname == '/project' ? styles.active : ''}>Публикации</a>
         </Link>
-        <Link href="/">
-          <a>Вебинары</a>
+        <Link href="/webinars">
+          <a className={router.pathname == '/webinars' ? styles.active : ''}>Вебинары</a>
         </Link>
         <Link href="/">
           <a className={styles.header_bold}>Войти <img src="/login.svg" alt="login" /></a>

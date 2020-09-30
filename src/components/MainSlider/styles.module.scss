@@ -13,7 +13,28 @@
   }
 
   &_wrapper {
-    width: 50%;
+    width: 47%;
+  }
+
+  &_buttons {
+    z-index: 1;
+    margin-top: 25px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 28%;
+    margin-left: auto;
+  }
+
+  &_prev,
+  &_next {
+    position: relative;
+    width: 90px;
+    transition: .4s linear;
+
+    &::after {
+      content: '';
+    }
   }
 
   &_img {

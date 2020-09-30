@@ -17,7 +17,7 @@ export default function NewsContent() {
       {Array(4)
           .fill(0)
           .map((_,i) => (
-            <SmallNews key={i} />
+            <SmallNews id={i} key={i} />
           ))
         }
       </div>

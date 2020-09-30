@@ -4,7 +4,6 @@ import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import MainSliderItem from "./Item";
 import clsx from 'clsx';
-import EarthSVG from '../EarthSVG';
 
 SwiperCore.use([Navigation]);
 
@@ -16,12 +15,12 @@ const MainSlider = () => {
       <b>Туристическая</b><br/>
       экосистема
       </h1>
-      <EarthSVG />
+      <img className={styles.main_slider_img} src="/main.png" alt=""/>
       <div className={styles.main_slider_wrapper}>
         <Swiper
           speed={1000}
           slidesPerView={1}
-          navigation
+          navigation={{nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'}}
         >
           <SwiperSlide className={styles.main_slider_flex}>
             <MainSliderItem 
@@ -46,6 +45,20 @@ const MainSlider = () => {
               bg="#2FCFD7;"
             />
           </SwiperSlide>
+          <div className={styles.main_slider_buttons}>
+            <div className={clsx(styles.main_slider_prev, "swiper-button-prev")}>
+              <svg height="30" viewBox="0 0 90 30"  fill="none">
+                <path d="M1 7.99997L89 7" stroke="#1AB7E2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M8 15L1 8L8 1" stroke="#1AB7E2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <div className={clsx(styles.main_slider_next,"swiper-button-next")}>
+            <svg height="30" viewBox="0 0 90 30" fill="none">
+              <path d="M1 7.99997L89 7" stroke="#1AB7E2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M82 0.999969L89 7.99997L82 15" stroke="#1AB7E2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            </div>
+          </div>
         </Swiper>
       </div>
     </section>

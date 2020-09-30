@@ -34,6 +34,13 @@
     }
   }
 
+  &_slide {
+    display: grid;
+    width: 480px;
+    grid-template-columns: 480px;
+    grid-template-rows: 590px;
+  }
+
   &_link {
     display: flex;
     align-items: center;
@@ -53,10 +60,30 @@
     }
   }
 
+  &_buttons {
+    z-index: 1;
+    margin-top: 25px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+    margin-left: auto;
+    margin-right: 50px;
+  }
+
+  &_prev,
+  &_next {
+    position: relative;
+    width: 90px;
+    transition: .4s linear;
+
+    &::after {
+      content: '';
+    }
+  }
+
   &_grid {
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: 480px;
-    grid-template-rows: 590px;
+    margin-left: 105px;
   }
 }

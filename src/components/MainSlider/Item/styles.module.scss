@@ -6,6 +6,9 @@
 
   &:nth-child(even) {
     background-color: #1AB7E2;
+    img {
+      padding-top: 40px;
+    }
   }
 
   h3 {

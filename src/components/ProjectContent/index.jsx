@@ -22,7 +22,7 @@ export default function ProjectContent() {
       {Array(4)
           .fill(0)
           .map((_,i) => (
-            <SmallProject key={i} />
+            <SmallProject id={i} key={i} />
           ))
         }
       </div>

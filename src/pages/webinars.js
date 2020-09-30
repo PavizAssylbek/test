@@ -1,21 +1,22 @@
 import React from 'react'
 import Head from 'next/head'
 import MainLayout from '../components/MainLayout'
-import NewsContent from '../components/NewsContent'
+
+import WebinarsContent from '../components/WebinarsContent'
 
 
-export default function News() {
+export default function Webinars() {
 
   return (
     <MainLayout>
       <Head>
-        <title>Tourism: News</title>
+        <title>Tourism: Webinars</title>
       </Head>
+
           
           <div className="flex">
-            <NewsContent />
+            <WebinarsContent />
           </div>
-          
     </MainLayout>
   )
 

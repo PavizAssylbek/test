@@ -1,20 +1,23 @@
 import clsx from 'clsx'
 import React from 'react'
 import styles from './styles.module.scss'
+import Link from 'next/link'
 
-export default function SmallNews() {
+export default function SmallProject({id}) {
 
   return (
-    <div className={styles.smallnews}>
-      <img className={clsx(styles.smallnews__img, 'border-radius')} src="/boa.png" alt="#"/>
-      <div className={styles.smallnews_content}>
+    <Link href={`/project/${id}`}>
+      <a className={styles.smallproject}>
+      <img className={clsx(styles.smallproject__img, 'border-radius')} src="/boa.png" alt="#"/>
+      <div className={styles.smallproject_content}>
         <div className="flex">
           <img src="/eye.svg" alt="#"/>
-          <span className={styles.smallnews_view}>222</span>
+          <span className={styles.smallproject_view}>222</span>
         </div>
-        <p className={styles.smallnews_text}>Анти-Валентин — топ-5 мест, где можно излечиться от любви</p>
+        <p className={styles.smallproject_text}>Анти-Валентин — топ-5 мест, где можно излечиться от любви</p>
       </div>
-    </div>
+    </a>
+    </Link>
   )
 
 
