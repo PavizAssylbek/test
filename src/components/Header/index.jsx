@@ -55,7 +55,7 @@ function Header({t}) {
           </a>
         </Link>
         <Link href="/">
-          <a className={router.pathname == '/' ? styles.active : ''}>{t('main')}</a>
+          <a className={router.pathname == '/' ? styles.active : ''}>{t('h1')}</a>
         </Link>
         <Link href="/news">
           <a className={router.pathname == '/news' ? styles.active : ''}>Новости</a>
