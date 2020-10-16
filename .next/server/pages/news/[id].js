@@ -88,49 +88,2596 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/news/[id].js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/pages/news/[id].js":
-/*!********************************!*\
-  !*** ./src/pages/news/[id].js ***!
-  \********************************/
-/*! exports provided: default */
+/***/ "/jkW":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.isDynamicRoute = isDynamicRoute; // Identify /[param]/ in route string
+
+const TEST_ROUTE = /\/\[[^/]+?\](?=\/|$)/;
+
+function isDynamicRoute(route) {
+  return TEST_ROUTE.test(route);
+}
+
+/***/ }),
+
+/***/ "0Bsm":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__("AroE");
+
+exports.__esModule = true;
+exports.default = withRouter;
+
+var _react = _interopRequireDefault(__webpack_require__("cDcd"));
+
+var _router = __webpack_require__("nOHt");
+
+function withRouter(ComposedComponent) {
+  function WithRouterWrapper(props) {
+    return /*#__PURE__*/_react.default.createElement(ComposedComponent, Object.assign({
+      router: (0, _router.useRouter)()
+    }, props));
+  }
+
+  WithRouterWrapper.getInitialProps = ComposedComponent.getInitialProps // This is needed to allow checking for custom getInitialProps in _app
+  ;
+  WithRouterWrapper.origGetInitialProps = ComposedComponent.origGetInitialProps;
+
+  if (false) {}
+
+  return WithRouterWrapper;
+}
+
+/***/ }),
+
+/***/ 13:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("5cpM");
+
+
+/***/ }),
+
+/***/ "2/Zt":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ MainLayout; });
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__("YFqc");
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+
+// EXTERNAL MODULE: external "next/router"
+var router_ = __webpack_require__("4Q3z");
+
+// EXTERNAL MODULE: ./src/components/Sidebar/styles.module.scss
+var styles_module = __webpack_require__("W9/q");
+var styles_module_default = /*#__PURE__*/__webpack_require__.n(styles_module);
+
+// EXTERNAL MODULE: external "clsx"
+var external_clsx_ = __webpack_require__("dYMV");
+var external_clsx_default = /*#__PURE__*/__webpack_require__.n(external_clsx_);
+
+// CONCATENATED MODULE: ./src/components/Sidebar/index.jsx
+var __jsx = external_react_default.a.createElement;
+
+
+
+
+
+
+function Sidebar() {
+  const router = Object(router_["useRouter"])();
+  const [vissible, setVissible] = external_react_default.a.useState(false);
+
+  const toggleVisible = () => {
+    setVissible(!vissible);
+  };
+
+  return __jsx("div", {
+    className: styles_module_default.a.sidebar
+  }, __jsx("div", {
+    className: styles_module_default.a.sidebar_content
+  }, __jsx(link_default.a, {
+    href: "/"
+  }, __jsx("a", {
+    className: external_clsx_default()(styles_module_default.a.sidebar_link, router.pathname == '/' ? styles_module_default.a.active : '')
+  }, __jsx("svg", {
+    width: "32",
+    height: "32",
+    viewBox: "0 0 32 32",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, __jsx("path", {
+    d: "M4 12L16 2.66666L28 12V26.6667C28 27.3739 27.719 28.0522 27.219 28.5523C26.7189 29.0524 26.0406 29.3333 25.3333 29.3333H6.66667C5.95942 29.3333 5.28115 29.0524 4.78105 28.5523C4.28095 28.0522 4 27.3739 4 26.6667V12Z",
+    stroke: "white",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), __jsx("path", {
+    d: "M12 29.3333V16H20V29.3333",
+    stroke: "white",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })))), __jsx(link_default.a, {
+    href: "/news"
+  }, __jsx("a", {
+    className: external_clsx_default()(styles_module_default.a.sidebar_link, router.pathname == '/news' ? styles_module_default.a.active : '')
+  }, __jsx("svg", {
+    width: "32",
+    height: "32",
+    viewBox: "0 0 32 32",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, __jsx("path", {
+    d: "M28 20C28 20.7072 27.719 21.3855 27.219 21.8856C26.7189 22.3857 26.0406 22.6667 25.3333 22.6667H9.33333L4 28V6.66667C4 5.95942 4.28095 5.28115 4.78105 4.78105C5.28115 4.28095 5.95942 4 6.66667 4H25.3333C26.0406 4 26.7189 4.28095 27.219 4.78105C27.719 5.28115 28 5.95942 28 6.66667V20Z",
+    stroke: "white",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })))), __jsx(link_default.a, {
+    href: "/project"
+  }, __jsx("a", {
+    className: external_clsx_default()(styles_module_default.a.sidebar_link, router.pathname == '/project' ? styles_module_default.a.active : '')
+  }, __jsx("svg", {
+    width: "32",
+    height: "32",
+    viewBox: "0 0 32 32",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, __jsx("path", {
+    d: "M18.6666 2.66666H7.99998C7.29274 2.66666 6.61446 2.94761 6.11436 3.4477C5.61426 3.9478 5.33331 4.62608 5.33331 5.33332V26.6667C5.33331 27.3739 5.61426 28.0522 6.11436 28.5523C6.61446 29.0524 7.29274 29.3333 7.99998 29.3333H24C24.7072 29.3333 25.3855 29.0524 25.8856 28.5523C26.3857 28.0522 26.6666 27.3739 26.6666 26.6667V10.6667L18.6666 2.66666Z",
+    stroke: "white",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), __jsx("path", {
+    d: "M18.6667 2.66666V10.6667H26.6667",
+    stroke: "white",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), __jsx("path", {
+    d: "M21.3334 17.3333H10.6667",
+    stroke: "white",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), __jsx("path", {
+    d: "M21.3334 22.6667H10.6667",
+    stroke: "white",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), __jsx("path", {
+    d: "M13.3334 12H12H10.6667",
+    stroke: "white",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })))), __jsx(link_default.a, {
+    href: "/webinars"
+  }, __jsx("a", {
+    className: external_clsx_default()(styles_module_default.a.sidebar_link, router.pathname == '/webinars' ? styles_module_default.a.active : '')
+  }, __jsx("svg", {
+    width: "32",
+    height: "32",
+    viewBox: "0 0 32 32",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, __jsx("path", {
+    d: "M16 29.3333C23.3638 29.3333 29.3334 23.3638 29.3334 16C29.3334 8.63621 23.3638 2.66667 16 2.66667C8.63622 2.66667 2.66669 8.63621 2.66669 16C2.66669 23.3638 8.63622 29.3333 16 29.3333Z",
+    stroke: "white",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), __jsx("path", {
+    d: "M13.3333 10.6667L21.3333 16L13.3333 21.3333V10.6667Z",
+    stroke: "white",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })))), __jsx("button", {
+    onClick: toggleVisible,
+    className: external_clsx_default()(styles_module_default.a.sidebar_link)
+  }, vissible && __jsx("div", {
+    className: external_clsx_default()(styles_module_default.a.sidebar_menu, 'border-radius')
+  }, __jsx("p", null, "\u041A\u0438\u0446\u0435\u043D\u043A\u043E \u0410\u0440\u0442\u0451\u043C"), __jsx(link_default.a, {
+    href: "/"
+  }, __jsx("a", null, "\u041F\u0440\u043E\u0444\u0438\u043B\u044C")), __jsx(link_default.a, {
+    href: "/"
+  }, __jsx("a", null, "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438")), __jsx(link_default.a, {
+    href: "/feedback"
+  }, __jsx("a", {
+    className: styles_module_default.a.sidebar_feedback
+  }, "\u041E\u0431\u0440\u0430\u0442\u043D\u0430\u044F \u0441\u0432\u044F\u0437\u044C ", __jsx("sup", null, "2")))), __jsx("svg", {
+    width: "51",
+    height: "51",
+    viewBox: "0 0 51 51",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, __jsx("circle", {
+    cx: "25.5",
+    cy: "25.5",
+    r: "25.5",
+    fill: "white"
+  }), __jsx("path", {
+    d: "M35.6666 38V35.3333C35.6666 33.9188 35.1047 32.5623 34.1045 31.5621C33.1044 30.5619 31.7478 30 30.3333 30H19.6666C18.2522 30 16.8956 30.5619 15.8954 31.5621C14.8952 32.5623 14.3333 33.9188 14.3333 35.3333V38",
+    stroke: "#1AB7E2",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), __jsx("path", {
+    d: "M25 24.6667C27.9455 24.6667 30.3334 22.2789 30.3334 19.3333C30.3334 16.3878 27.9455 14 25 14C22.0545 14 19.6667 16.3878 19.6667 19.3333C19.6667 22.2789 22.0545 24.6667 25 24.6667Z",
+    stroke: "#1AB7E2",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })))));
+}
+
+/* harmony default export */ var components_Sidebar = (Sidebar);
+// EXTERNAL MODULE: ./src/components/Header/styles.module.scss
+var Header_styles_module = __webpack_require__("JmTP");
+var Header_styles_module_default = /*#__PURE__*/__webpack_require__.n(Header_styles_module);
+
+// EXTERNAL MODULE: ./i18n.js
+var i18n = __webpack_require__("k7Sn");
+
+// CONCATENATED MODULE: ./src/components/Header/index.jsx
+var Header_jsx = external_react_default.a.createElement;
+
+
+
+
+
+
+
+function Header({
+  t
+}) {
+  const router = Object(router_["useRouter"])();
+  const [visiblePopup, setVisiblePopup] = external_react_default.a.useState(false);
+  const [activeItem, setActiveItem] = external_react_default.a.useState(0);
+  const langRef = external_react_default.a.useRef();
+  const allLang = ['ru', 'kz'];
+  const activeLang = allLang[activeItem];
+
+  const changeLang = () => {
+    i18n["i18n"].changeLanguage(activeLang);
+  };
+
+  const toggleVisible = () => {
+    setVisiblePopup(!visiblePopup);
+  };
+
+  const handleOutsideClick = e => {
+    if (!e.path.includes(langRef.current)) {
+      setVisiblePopup(false);
+    }
+  };
+
+  external_react_default.a.useEffect(() => {
+    document.body.addEventListener('click', handleOutsideClick);
+    return () => {
+      document.body.removeEventListener('click', handleOutsideClick);
+    };
+  }, []);
+
+  const onSelectItem = id => {
+    setActiveItem(id);
+    setVisiblePopup(false);
+  };
+
+  return Header_jsx("header", {
+    className: Header_styles_module_default.a.header
+  }, Header_jsx("div", {
+    className: "container"
+  }, Header_jsx("nav", {
+    className: Header_styles_module_default.a.header_content
+  }, Header_jsx(link_default.a, {
+    href: "/"
+  }, Header_jsx("a", {
+    className: Header_styles_module_default.a.header_bold
+  }, Header_jsx("img", {
+    src: "/h_logo.svg",
+    alt: "#"
+  }))), Header_jsx(link_default.a, {
+    href: "/"
+  }, Header_jsx("a", {
+    className: router.pathname == '/' ? Header_styles_module_default.a.active : ''
+  }, t('main'))), Header_jsx(link_default.a, {
+    href: "/news"
+  }, Header_jsx("a", {
+    className: router.pathname == '/news' ? Header_styles_module_default.a.active : ''
+  }, "\u041D\u043E\u0432\u043E\u0441\u0442\u0438")), Header_jsx(link_default.a, {
+    href: "/project"
+  }, Header_jsx("a", {
+    className: router.pathname == '/project' ? Header_styles_module_default.a.active : ''
+  }, "\u041F\u0440\u043E\u0435\u043A\u0442\u044B")), Header_jsx(link_default.a, {
+    href: "/webinars"
+  }, Header_jsx("a", {
+    className: router.pathname == '/webinars' ? Header_styles_module_default.a.active : ''
+  }, "\u0412\u0435\u0431\u0438\u043D\u0430\u0440\u044B")), Header_jsx(link_default.a, {
+    href: "/login"
+  }, Header_jsx("a", {
+    className: Header_styles_module_default.a.header_bold
+  }, "\u0412\u043E\u0439\u0442\u0438 ", Header_jsx("img", {
+    src: "/login.svg",
+    alt: "login"
+  }))), Header_jsx("div", {
+    ref: langRef,
+    className: Header_styles_module_default.a.header_lang
+  }, Header_jsx("span", {
+    onClick: toggleVisible
+  }, activeLang, " ", Header_jsx("img", {
+    src: "/dd.svg",
+    alt: "#"
+  })), visiblePopup && Header_jsx("ul", {
+    className: external_clsx_default()(Header_styles_module_default.a.header_langs, 'border-radius')
+  }, allLang && allLang.map((name, index) => Header_jsx("li", {
+    onClick: (() => activeItem !== index ? onSelectItem(index) : '', changeLang),
+    className: external_clsx_default()(activeItem === index ? Header_styles_module_default.a.active : ''),
+    key: index
+  }, name)))), Header_jsx(link_default.a, {
+    href: "/regis"
+  }, Header_jsx("a", {
+    className: external_clsx_default()(Header_styles_module_default.a.registration, 'border-radius')
+  }, "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438")))));
+}
+
+/* harmony default export */ var components_Header = (Object(i18n["withTranslation"])('header')(Header));
+// CONCATENATED MODULE: ./src/components/MainLayout/index.jsx
+var MainLayout_jsx = external_react_default.a.createElement;
+
+
+
+
+function MainLayout({
+  children
+}) {
+  return MainLayout_jsx("div", {
+    className: "home"
+  }, MainLayout_jsx("main", {
+    className: "flex"
+  }, MainLayout_jsx(components_Sidebar, null), MainLayout_jsx("div", {
+    className: "content"
+  }, MainLayout_jsx(components_Header, null), children, MainLayout_jsx("section", {
+    className: "footer-top"
+  }, MainLayout_jsx("div", {
+    className: "container"
+  }, MainLayout_jsx("div", {
+    className: "footer-top_flex"
+  }, MainLayout_jsx(link_default.a, {
+    href: "https://www.gov.kz/memleket/entities/mcs"
+  }, MainLayout_jsx("a", {
+    className: "flex",
+    target: "_blank"
+  }, MainLayout_jsx("img", {
+    src: "/footer1.jpg",
+    alt: "#"
+  }), "\u041C\u0438\u043D\u0438\u0441\u0442\u0435\u0440\u0441\u0442\u0432\u043E \u043A\u0443\u043B\u044C\u0442\u0443\u0440\u044B \u0438 \u0441\u043F\u043E\u0440\u0442\u0430 \u0420\u0435\u0441\u043F\u0443\u0431\u043B\u0438\u043A\u0438 \u041A\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043D")), MainLayout_jsx(link_default.a, {
+    href: "https://qaztourism.kz/"
+  }, MainLayout_jsx("a", {
+    className: "flex",
+    target: "_blank"
+  }, MainLayout_jsx("img", {
+    src: "/footer2.jpg",
+    alt: "#"
+  }), "\u041E\u0444\u0438\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0439 \u0432\u0435\u0431-\u0441\u0430\u0439\u0442 \u0410\u041E \"\u041D\u041A \"Kazakh Tourism\"")), MainLayout_jsx(link_default.a, {
+    href: "https://tourstat.kz"
+  }, MainLayout_jsx("a", {
+    className: "flex",
+    target: "_blank"
+  }, MainLayout_jsx("img", {
+    src: "/footer3.jpg",
+    alt: "#"
+  }), "\u041D\u0430\u0446\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0439 \u0442\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u043F\u043E\u0440\u0442\u0430\u043B")), MainLayout_jsx(link_default.a, {
+    href: "https://kazakhstan.travel"
+  }, MainLayout_jsx("a", {
+    className: "flex",
+    target: "_blank"
+  }, MainLayout_jsx("img", {
+    src: "/footer1.jpg",
+    alt: "#"
+  }), "\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u0430\u044F \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u0434\u043B\u044F \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u044F \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0445 \u0434\u0430\u043D\u043D\u044B\u0445 \"Tourstat\""))))), MainLayout_jsx("footer", {
+    className: "footer"
+  }, MainLayout_jsx("div", {
+    className: "container"
+  }, MainLayout_jsx("div", {
+    className: "footer-flex"
+  }, MainLayout_jsx("div", {
+    className: "footer-img"
+  }, MainLayout_jsx(link_default.a, {
+    href: "/"
+  }, MainLayout_jsx("a", null, MainLayout_jsx("img", {
+    src: "/h_logo.svg",
+    alt: "#"
+  })))), MainLayout_jsx("div", {
+    className: "footer-links"
+  }, MainLayout_jsx(link_default.a, {
+    href: "/"
+  }, MainLayout_jsx("a", null, "\u0413\u043B\u0430\u0432\u043D\u0430\u044F")), MainLayout_jsx(link_default.a, {
+    href: "/news"
+  }, MainLayout_jsx("a", null, "\u041D\u043E\u0432\u043E\u0441\u0442\u0438")), MainLayout_jsx(link_default.a, {
+    href: "/project"
+  }, MainLayout_jsx("a", null, "\u041F\u0443\u0431\u043B\u0438\u043A\u0430\u0446\u0438\u0438")), MainLayout_jsx(link_default.a, {
+    href: "/webinars"
+  }, MainLayout_jsx("a", null, "\u0412\u0435\u0431\u0438\u043D\u0430\u0440\u044B")))))))));
+}
+
+/***/ }),
+
+/***/ "3WeD":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.searchParamsToUrlQuery = searchParamsToUrlQuery;
+exports.urlQueryToSearchParams = urlQueryToSearchParams;
+exports.assign = assign;
+
+function searchParamsToUrlQuery(searchParams) {
+  const query = {};
+  searchParams.forEach((value, key) => {
+    if (typeof query[key] === 'undefined') {
+      query[key] = value;
+    } else if (Array.isArray(query[key])) {
+      ;
+      query[key].push(value);
+    } else {
+      query[key] = [query[key], value];
+    }
+  });
+  return query;
+}
+
+function urlQueryToSearchParams(urlQuery) {
+  const result = new URLSearchParams();
+  Object.entries(urlQuery).forEach(([key, value]) => {
+    if (Array.isArray(value)) {
+      value.forEach(item => result.append(key, item));
+    } else {
+      result.set(key, value);
+    }
+  });
+  return result;
+}
+
+function assign(target, ...searchParamsList) {
+  searchParamsList.forEach(searchParams => {
+    Array.from(searchParams.keys()).forEach(key => target.delete(key));
+    searchParams.forEach((value, key) => target.append(key, value));
+  });
+  return target;
+}
+
+/***/ }),
+
+/***/ "4Q3z":
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
+
+/***/ }),
+
+/***/ "5cpM":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return insideNews; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\meehr\\Desktop\\tourism\\src\\pages\\news\\[id].js";
-
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("xnum");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("YFqc");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_MainLayout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("2/Zt");
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("dYMV");
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(clsx__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _styles_module_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("NT5a");
+/* harmony import */ var _styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_module_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_SmallNews__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("aqq/");
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
 function insideNews() {
-  return __jsx("h1", {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 3,
-      columnNumber: 5
-    }
-  }, "insideNews");
+  return __jsx(_components_MainLayout__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, null, __jsx("title", null, "Tourism: News")), __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_4___default()(_styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.inside, 'container')
+  }, __jsx("div", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.inside_head
+  }, __jsx("h2", null, "\u041D\u043E\u0432\u043E\u0441\u0442\u0438"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/news"
+  }, __jsx("a", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.inside_link
+  }, __jsx("span", null, "\u041D\u0430\u0437\u0430\u0434"), " ", __jsx("img", {
+    src: "/back.png",
+    alt: "back"
+  })))), __jsx("div", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.inside_content
+  }, __jsx("div", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.inside_left
+  }, __jsx("img", {
+    className: "border-radius",
+    src: "/inside.png",
+    alt: "#"
+  }), __jsx("h3", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.inside_left_title
+  }, "\u0411\u043E\u043B\u0435\u0435 20 \u043D\u043E\u0432\u044B\u0445 \u0442\u0443\u0440\u043E\u0431\u044A\u0435\u043A\u0442\u043E\u0432 \u043F\u043E\u044F\u0432\u044F\u0442\u0441\u044F \u0432 \u0410\u043B\u043C\u0430\u0442\u0438\u043D\u0441\u043A\u043E\u0439 \u043E\u0431\u043B\u0430\u0441\u0442\u0438 \u0434\u043E \u043A\u043E\u043D\u0446\u0430 \u0433\u043E\u0434\u0430"), __jsx("span", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.inside_left_data
+  }, "21.09.2020"), __jsx("div", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.inside_flex
+  }, __jsx("p", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.inside_view
+  }, __jsx("img", {
+    src: "/eye2.svg",
+    alt: "#"
+  }), "222"), __jsx("div", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.inside_socialnetwork
+  }, __jsx("img", {
+    src: "/logo-vk.svg",
+    alt: "#"
+  }), __jsx("img", {
+    src: "/logo-twitter.svg",
+    alt: "#"
+  }), __jsx("img", {
+    src: "/logo-facebook.svg",
+    alt: "#"
+  }), __jsx("img", {
+    src: "/logo-instagram.svg",
+    alt: "#"
+  }))), __jsx("div", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.inside_anytext
+  }, __jsx("p", null, __jsx("b", null, "\u041A\u0430\u043A \u0441\u043E\u043E\u0431\u0449\u0438\u043B\u0438 \u0432 \u043E\u0431\u043B\u0430\u0441\u0442\u043D\u043E\u043C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0438 \u0442\u0443\u0440\u0438\u0437\u043C\u0430, \u043F\u043E \u0438\u0442\u043E\u0433\u0430\u043C \u043F\u0435\u0440\u0432\u043E\u0433\u043E \u043F\u043E\u043B\u0443\u0433\u043E\u0434\u0438\u044F \u0432 \u043E\u0431\u043B\u0430\u0441\u0442\u0438 \u0444\u0443\u043D\u043A\u0446\u0438\u043E\u043D\u0438\u0440\u0443\u044E\u0442 795 \u0442\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0445 \u043C\u0435\u0441\u0442, \u043F\u043E \u0441\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u044E \u0441 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u043C \u043F\u0435\u0440\u0438\u043E\u0434\u043E\u043C \u043F\u0440\u043E\u0448\u043B\u043E\u0433\u043E \u0433\u043E\u0434\u0430 \u0434\u043E\u0441\u0442\u0438\u0433\u043D\u0443\u0442 \u0440\u043E\u0441\u0442 \u043D\u0430 4%.")), __jsx("p", null, "\"\u0423\u0436\u0435 \u0432\u0432\u0435\u0434\u0435\u043D\u043E \u0432 \u044D\u043A\u0441\u043F\u043B\u0443\u0430\u0442\u0430\u0446\u0438\u044E 14 \u043E\u0431\u044A\u0435\u043A\u0442\u043E\u0432 \u0442\u0443\u0440\u0438\u0441\u0442\u0441\u043A\u043E\u0439 \u0438\u043D\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u044B \u0441 \u043F\u0440\u0438\u0432\u043B\u0435\u0447\u0435\u043D\u0438\u0435\u043C \u0447\u0430\u0441\u0442\u043D\u044B\u0445 \u0438\u043D\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u0439 \u043D\u0430 \u0441\u0443\u043C\u043C\u0443 1081 \u043C\u043B\u043D \u0442\u0435\u043D\u0433\u0435. \u0412 \u0442\u043E\u043C \u0447\u0438\u0441\u043B\u0435 \u043E\u0434\u0438\u043D \u043A\u043E\u043C\u043F\u043B\u0435\u043A\u0441 \u0432 \u0416\u0430\u043C\u0431\u044B\u043B\u0441\u043A\u043E\u043C \u0440\u0430\u0439\u043E\u043D\u0435, \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u0435 13 - \u043D\u0430 \u043F\u043E\u0431\u0435\u0440\u0435\u0436\u044C\u0435 \u043E\u0437\u0435\u0440\u0430 \u0410\u043B\u0430\u043A\u043E\u043B\u044C. \u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043E\u0431\u0441\u043B\u0443\u0436\u0435\u043D\u043D\u044B\u0445 \u043F\u043E\u0441\u0435\u0442\u0438\u0442\u0435\u043B\u0435\u0439 \u0441\u043E\u0441\u0442\u0430\u0432\u0438\u043B\u043E 421,9 \u0442\u044B\u0441. \u0447\u0435\u043B\u043E\u0432\u0435\u043A \u0438\u043B\u0438 54% \u043A \u0430\u043D\u0430\u043B\u043E\u0433\u0438\u0447\u043D\u043E\u043C\u0443 \u043F\u0435\u0440\u0438\u043E\u0434\u0443 \u043F\u0440\u043E\u0448\u043B\u043E\u0433\u043E \u0433\u043E\u0434\u0430. \u041E\u043A\u0430\u0437\u0430\u043D\u043E \u043F\u043B\u0430\u0442\u043D\u044B\u0445 \u0442\u0443\u0440\u0438\u0441\u0442\u0441\u043A\u043E-\u043E\u0437\u0434\u043E\u0440\u043E\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0445 \u0443\u0441\u043B\u0443\u0433 \u043D\u0430 \u0441\u0443\u043C\u043C\u0443 3621 \u043C\u043B\u043D \u0442\u0435\u043D\u0433\u0435 \u0438\u043B\u0438 63% \u043A \u0443\u0440\u043E\u0432\u043D\u044E \u043F\u0440\u043E\u0448\u043B\u043E\u0433\u043E \u0433\u043E\u0434\u0430\", - \u0441\u043E\u043E\u0431\u0449\u0438\u043B\u0438 \u0432 \u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0438."), __jsx("p", null, "\u041A\u0440\u043E\u043C\u0435 \u0442\u043E\u0433\u043E, \u043D\u0430 \u0442\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u0438 \u0433\u043E\u0440\u043D\u043E\u0433\u043E \u043A\u043B\u0430\u0441\u0442\u0435\u0440\u0430 \u0432\u0435\u0434\u0435\u0442\u0441\u044F \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0434\u043E\u043B\u0433\u043E\u0441\u0440\u043E\u0447\u043D\u044B\u0445 \u043A\u0440\u0443\u043F\u043D\u044B\u0445 \u0438\u043D\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u043E\u043D\u043D\u044B\u0445 \u043F\u0440\u043E\u0435\u043A\u0442\u043E\u0432 \u043F\u043E \u0441\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0443 \u043A\u0443\u0440\u043E\u0440\u0442\u043E\u0432 \"\u0410\u043F\u043E\u0440\u0442\" \u0438 \"\u0410\u043A \u0411\u0443\u043B\u0430\u043A\" \u0432 \u0422\u0430\u043B\u0433\u0430\u0440\u0441\u043A\u043E\u043C \u0440\u0430\u0439\u043E\u043D\u0435, \"\u0422\u0443\u0440\u0433\u0435\u043D\u044C\" - \u0432 \u0415\u043D\u0431\u0435\u043A\u0448\u0438\u043A\u0430\u0437\u0430\u0445\u0441\u043A\u043E\u043C \u0440\u0430\u0439\u043E\u043D\u0435 \u0438 \u0440\u0430\u0437\u0432\u043B\u0435\u043A\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0433\u043E \u043A\u043E\u043C\u043F\u043B\u0435\u043A\u0441\u0430 Park Canyon \u0432 \u0420\u0430\u0439\u044B\u043C\u0431\u0435\u043A\u0441\u043A\u043E\u043C \u0440\u0430\u0439\u043E\u043D\u0435 \u043D\u0430 \u043E\u0431\u0449\u0443\u044E \u0441\u0443\u043C\u043C\u0443 542,7 \u043C\u043B\u0440\u0434 \u0442\u0435\u043D\u0433\u0435 \u0447\u0430\u0441\u0442\u043D\u044B\u0445 \u0438\u043D\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u0439.\u202F"), __jsx("p", null, "\u041D\u0430 \u043F\u043E\u0431\u0435\u0440\u0435\u0436\u044C\u0435 \u043E\u0437\u0435\u0440\u0430 \u0410\u043B\u0430\u043A\u043E\u043B\u044C \u043F\u043E\u044F\u0432\u0438\u0442\u0441\u044F \u043A\u043E\u0442\u0442\u0435\u0434\u0436\u043D\u044B\u0439 \u0433\u043E\u0440\u043E\u0434\u043E\u043A c \u043B\u0435\u0442\u043D\u0438\u043C \u0430\u043C\u0444\u0438\u0442\u0435\u0430\u0442\u0440\u043E\u043C Alakol Apartments, \u0441\u0443\u043C\u043C\u0430 \u0438\u043D\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u0439 \u0432 \u043F\u0440\u043E\u0435\u043A\u0442 \u0441\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 4 \u043C\u043B\u0440\u0434 \u0442\u0435\u043D\u0433\u0435."), __jsx("p", null, "\"\u0423\u0436\u0435 \u0432\u0432\u0435\u0434\u0435\u043D\u043E \u0432 \u044D\u043A\u0441\u043F\u043B\u0443\u0430\u0442\u0430\u0446\u0438\u044E 14 \u043E\u0431\u044A\u0435\u043A\u0442\u043E\u0432 \u0442\u0443\u0440\u0438\u0441\u0442\u0441\u043A\u043E\u0439 \u0438\u043D\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u044B \u0441 \u043F\u0440\u0438\u0432\u043B\u0435\u0447\u0435\u043D\u0438\u0435\u043C \u0447\u0430\u0441\u0442\u043D\u044B\u0445 \u0438\u043D\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u0439 \u043D\u0430 \u0441\u0443\u043C\u043C\u0443 1081 \u043C\u043B\u043D \u0442\u0435\u043D\u0433\u0435. \u0412 \u0442\u043E\u043C \u0447\u0438\u0441\u043B\u0435 \u043E\u0434\u0438\u043D \u043A\u043E\u043C\u043F\u043B\u0435\u043A\u0441 \u0432 \u0416\u0430\u043C\u0431\u044B\u043B\u0441\u043A\u043E\u043C \u0440\u0430\u0439\u043E\u043D\u0435, \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u0435 13 - \u043D\u0430 \u043F\u043E\u0431\u0435\u0440\u0435\u0436\u044C\u0435 \u043E\u0437\u0435\u0440\u0430 \u0410\u043B\u0430\u043A\u043E\u043B\u044C. \u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043E\u0431\u0441\u043B\u0443\u0436\u0435\u043D\u043D\u044B\u0445 \u043F\u043E\u0441\u0435\u0442\u0438\u0442\u0435\u043B\u0435\u0439 \u0441\u043E\u0441\u0442\u0430\u0432\u0438\u043B\u043E 421,9 \u0442\u044B\u0441. \u0447\u0435\u043B\u043E\u0432\u0435\u043A \u0438\u043B\u0438 54% \u043A \u0430\u043D\u0430\u043B\u043E\u0433\u0438\u0447\u043D\u043E\u043C\u0443 \u043F\u0435\u0440\u0438\u043E\u0434\u0443 \u043F\u0440\u043E\u0448\u043B\u043E\u0433\u043E \u0433\u043E\u0434\u0430. \u041E\u043A\u0430\u0437\u0430\u043D\u043E \u043F\u043B\u0430\u0442\u043D\u044B\u0445 \u0442\u0443\u0440\u0438\u0441\u0442\u0441\u043A\u043E-\u043E\u0437\u0434\u043E\u0440\u043E\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0445 \u0443\u0441\u043B\u0443\u0433 \u043D\u0430 \u0441\u0443\u043C\u043C\u0443 3621 \u043C\u043B\u043D \u0442\u0435\u043D\u0433\u0435 \u0438\u043B\u0438 63% \u043A \u0443\u0440\u043E\u0432\u043D\u044E \u043F\u0440\u043E\u0448\u043B\u043E\u0433\u043E \u0433\u043E\u0434\u0430\", - \u0441\u043E\u043E\u0431\u0449\u0438\u043B\u0438 \u0432 \u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0438."), __jsx("p", null, "\u041A\u0440\u043E\u043C\u0435 \u0442\u043E\u0433\u043E, \u043D\u0430 \u0442\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u0438 \u0433\u043E\u0440\u043D\u043E\u0433\u043E \u043A\u043B\u0430\u0441\u0442\u0435\u0440\u0430 \u0432\u0435\u0434\u0435\u0442\u0441\u044F \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0434\u043E\u043B\u0433\u043E\u0441\u0440\u043E\u0447\u043D\u044B\u0445 \u043A\u0440\u0443\u043F\u043D\u044B\u0445 \u0438\u043D\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u043E\u043D\u043D\u044B\u0445 \u043F\u0440\u043E\u0435\u043A\u0442\u043E\u0432 \u043F\u043E \u0441\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0443 \u043A\u0443\u0440\u043E\u0440\u0442\u043E\u0432 \"\u0410\u043F\u043E\u0440\u0442\" \u0438 \"\u0410\u043A \u0411\u0443\u043B\u0430\u043A\" \u0432 \u0422\u0430\u043B\u0433\u0430\u0440\u0441\u043A\u043E\u043C \u0440\u0430\u0439\u043E\u043D\u0435, \"\u0422\u0443\u0440\u0433\u0435\u043D\u044C\" - \u0432 \u0415\u043D\u0431\u0435\u043A\u0448\u0438\u043A\u0430\u0437\u0430\u0445\u0441\u043A\u043E\u043C \u0440\u0430\u0439\u043E\u043D\u0435 \u0438 \u0440\u0430\u0437\u0432\u043B\u0435\u043A\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0433\u043E \u043A\u043E\u043C\u043F\u043B\u0435\u043A\u0441\u0430 Park Canyon \u0432 \u0420\u0430\u0439\u044B\u043C\u0431\u0435\u043A\u0441\u043A\u043E\u043C \u0440\u0430\u0439\u043E\u043D\u0435 \u043D\u0430 \u043E\u0431\u0449\u0443\u044E \u0441\u0443\u043C\u043C\u0443 542,7 \u043C\u043B\u0440\u0434 \u0442\u0435\u043D\u0433\u0435 \u0447\u0430\u0441\u0442\u043D\u044B\u0445 \u0438\u043D\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u0439.\u202F"))), __jsx("div", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_5___default.a.inside_right
+  }, Array(5).fill(0).map((_, i) => __jsx(_components_SmallNews__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"], {
+    id: i,
+    key: i
+  }))))));
 }
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
-/*! no static exports found */
+/***/ "6D7l":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.formatUrl = formatUrl;
+
+var querystring = _interopRequireWildcard(__webpack_require__("3WeD"));
+
+function _getRequireWildcardCache() {
+  if (typeof WeakMap !== "function") return null;
+  var cache = new WeakMap();
+
+  _getRequireWildcardCache = function () {
+    return cache;
+  };
+
+  return cache;
+}
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  }
+
+  if (obj === null || typeof obj !== "object" && typeof obj !== "function") {
+    return {
+      default: obj
+    };
+  }
+
+  var cache = _getRequireWildcardCache();
+
+  if (cache && cache.has(obj)) {
+    return cache.get(obj);
+  }
+
+  var newObj = {};
+  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+
+      if (desc && (desc.get || desc.set)) {
+        Object.defineProperty(newObj, key, desc);
+      } else {
+        newObj[key] = obj[key];
+      }
+    }
+  }
+
+  newObj.default = obj;
+
+  if (cache) {
+    cache.set(obj, newObj);
+  }
+
+  return newObj;
+} // Format function modified from nodejs
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+const slashedProtocols = /https?|ftp|gopher|file/;
+
+function formatUrl(urlObj) {
+  let {
+    auth,
+    hostname
+  } = urlObj;
+  let protocol = urlObj.protocol || '';
+  let pathname = urlObj.pathname || '';
+  let hash = urlObj.hash || '';
+  let query = urlObj.query || '';
+  let host = false;
+  auth = auth ? encodeURIComponent(auth).replace(/%3A/i, ':') + '@' : '';
+
+  if (urlObj.host) {
+    host = auth + urlObj.host;
+  } else if (hostname) {
+    host = auth + (~hostname.indexOf(':') ? `[${hostname}]` : hostname);
+
+    if (urlObj.port) {
+      host += ':' + urlObj.port;
+    }
+  }
+
+  if (query && typeof query === 'object') {
+    query = String(querystring.urlQueryToSearchParams(query));
+  }
+
+  let search = urlObj.search || query && `?${query}` || '';
+  if (protocol && protocol.substr(-1) !== ':') protocol += ':';
+
+  if (urlObj.slashes || (!protocol || slashedProtocols.test(protocol)) && host !== false) {
+    host = '//' + (host || '');
+    if (pathname && pathname[0] !== '/') pathname = '/' + pathname;
+  } else if (!host) {
+    host = '';
+  }
+
+  if (hash && hash[0] !== '#') hash = '#' + hash;
+  if (search && search[0] !== '?') search = '?' + search;
+  pathname = pathname.replace(/[?#]/g, encodeURIComponent);
+  search = search.replace('#', '%23');
+  return `${protocol}${host}${pathname}${search}${hash}`;
+}
+
+/***/ }),
+
+/***/ "6f9I":
+/***/ (function(module, exports) {
+
+module.exports = require("next-i18next");
+
+/***/ }),
+
+/***/ "7KCV":
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__("C+bE");
+
+function _getRequireWildcardCache() {
+  if (typeof WeakMap !== "function") return null;
+  var cache = new WeakMap();
+
+  _getRequireWildcardCache = function _getRequireWildcardCache() {
+    return cache;
+  };
+
+  return cache;
+}
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  }
+
+  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
+    return {
+      "default": obj
+    };
+  }
+
+  var cache = _getRequireWildcardCache();
+
+  if (cache && cache.has(obj)) {
+    return cache.get(obj);
+  }
+
+  var newObj = {};
+  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+
+      if (desc && (desc.get || desc.set)) {
+        Object.defineProperty(newObj, key, desc);
+      } else {
+        newObj[key] = obj[key];
+      }
+    }
+  }
+
+  newObj["default"] = obj;
+
+  if (cache) {
+    cache.set(obj, newObj);
+  }
+
+  return newObj;
+}
+
+module.exports = _interopRequireWildcard;
+
+/***/ }),
+
+/***/ "AroE":
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+
+/***/ }),
+
+/***/ "C+bE":
+/***/ (function(module, exports) {
+
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    module.exports = _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    module.exports = _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+module.exports = _typeof;
+
+/***/ }),
+
+/***/ "JmTP":
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"header": "styles_header__gNENU",
+	"header_content": "styles_header_content__wqZ7X",
+	"header_bold": "styles_header_bold__1DBrb",
+	"active": "styles_active__3zqNB",
+	"registration": "styles_registration__3iYNg",
+	"header_lang": "styles_header_lang__aT7ry",
+	"header_langs": "styles_header_langs__2Ys0O"
+};
+
+
+/***/ }),
+
+/***/ "KNus":
+/***/ (function(module, exports) {
+
+module.exports = require("next/config");
+
+/***/ }),
+
+/***/ "NT5a":
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"inside": "styles_inside__Slcrj",
+	"inside_head": "styles_inside_head__1AY7L",
+	"inside_link": "styles_inside_link__SHX1F",
+	"inside_content": "styles_inside_content__x19b7",
+	"inside_left": "styles_inside_left__6f5Np",
+	"inside_left_title": "styles_inside_left_title__41UFn",
+	"inside_left_data": "styles_inside_left_data__121Ez",
+	"inside_right": "styles_inside_right__1McIj",
+	"inside_flex": "styles_inside_flex__3oFV2",
+	"inside_view": "styles_inside_view__1FxAu",
+	"inside_socialnetwork": "styles_inside_socialnetwork__gUVMe",
+	"inside_anytext": "styles_inside_anytext__3wSD5"
+};
+
+
+/***/ }),
+
+/***/ "Osoz":
+/***/ (function(module, exports) {
+
+module.exports = require("next/dist/next-server/lib/router-context.js");
+
+/***/ }),
+
+/***/ "S3md":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/***/ }),
+
+/***/ "W9/q":
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"sidebar": "styles_sidebar__3NLqa",
+	"sidebar_content": "styles_sidebar_content__2wb0w",
+	"sidebar_menu": "styles_sidebar_menu__1zsjk",
+	"sidebar_feedback": "styles_sidebar_feedback__2l9pY",
+	"sidebar_link": "styles_sidebar_link__20ZNf",
+	"active": "styles_active__3WuXE"
+};
+
+
+/***/ }),
+
+/***/ "X24+":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.removePathTrailingSlash = removePathTrailingSlash;
+exports.normalizePathTrailingSlash = void 0;
+/**
+* Removes the trailing slash of a path if there is one. Preserves the root path `/`.
+*/
+
+function removePathTrailingSlash(path) {
+  return path.endsWith('/') && path !== '/' ? path.slice(0, -1) : path;
+}
+/**
+* Normalizes the trailing slash of a path according to the `trailingSlash` option
+* in `next.config.js`.
+*/
+
+
+const normalizePathTrailingSlash =  false ? undefined : removePathTrailingSlash;
+exports.normalizePathTrailingSlash = normalizePathTrailingSlash;
+
+/***/ }),
+
+/***/ "YFqc":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("cTJO")
+
+
+/***/ }),
+
+/***/ "YTqd":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.getRouteRegex = getRouteRegex; // this isn't importing the escape-string-regex module
+// to reduce bytes
+
+function escapeRegex(str) {
+  return str.replace(/[|\\{}()[\]^$+*?.-]/g, '\\$&');
+}
+
+function parseParameter(param) {
+  const optional = param.startsWith('[') && param.endsWith(']');
+
+  if (optional) {
+    param = param.slice(1, -1);
+  }
+
+  const repeat = param.startsWith('...');
+
+  if (repeat) {
+    param = param.slice(3);
+  }
+
+  return {
+    key: param,
+    repeat,
+    optional
+  };
+}
+
+function getRouteRegex(normalizedRoute) {
+  const segments = (normalizedRoute.replace(/\/$/, '') || '/').slice(1).split('/');
+  const groups = {};
+  let groupIndex = 1;
+  const parameterizedRoute = segments.map(segment => {
+    if (segment.startsWith('[') && segment.endsWith(']')) {
+      const {
+        key,
+        optional,
+        repeat
+      } = parseParameter(segment.slice(1, -1));
+      groups[key] = {
+        pos: groupIndex++,
+        repeat,
+        optional
+      };
+      return repeat ? optional ? '(?:/(.+?))?' : '/(.+?)' : '/([^/]+?)';
+    } else {
+      return `/${escapeRegex(segment)}`;
+    }
+  }).join(''); // dead code eliminate for browser since it's only needed
+  // while generating routes-manifest
+
+  if (true) {
+    let routeKeyCharCode = 97;
+    let routeKeyCharLength = 1; // builds a minimal routeKey using only a-z and minimal number of characters
+
+    const getSafeRouteKey = () => {
+      let routeKey = '';
+
+      for (let i = 0; i < routeKeyCharLength; i++) {
+        routeKey += String.fromCharCode(routeKeyCharCode);
+        routeKeyCharCode++;
+
+        if (routeKeyCharCode > 122) {
+          routeKeyCharLength++;
+          routeKeyCharCode = 97;
+        }
+      }
+
+      return routeKey;
+    };
+
+    const routeKeys = {};
+    let namedParameterizedRoute = segments.map(segment => {
+      if (segment.startsWith('[') && segment.endsWith(']')) {
+        const {
+          key,
+          optional,
+          repeat
+        } = parseParameter(segment.slice(1, -1)); // replace any non-word characters since they can break
+        // the named regex
+
+        let cleanedKey = key.replace(/\W/g, '');
+        let invalidKey = false; // check if the key is still invalid and fallback to using a known
+        // safe key
+
+        if (cleanedKey.length === 0 || cleanedKey.length > 30) {
+          invalidKey = true;
+        }
+
+        if (!isNaN(parseInt(cleanedKey.substr(0, 1)))) {
+          invalidKey = true;
+        }
+
+        if (invalidKey) {
+          cleanedKey = getSafeRouteKey();
+        }
+
+        routeKeys[cleanedKey] = key;
+        return repeat ? optional ? `(?:/(?<${cleanedKey}>.+?))?` : `/(?<${cleanedKey}>.+?)` : `/(?<${cleanedKey}>[^/]+?)`;
+      } else {
+        return `/${escapeRegex(segment)}`;
+      }
+    }).join('');
+    return {
+      re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
+      groups,
+      routeKeys,
+      namedRegex: `^${namedParameterizedRoute}(?:/)?$`
+    };
+  }
+
+  return {
+    re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
+    groups
+  };
+}
+
+/***/ }),
+
+/***/ "aqq/":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SmallNews; });
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("dYMV");
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(clsx__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("YFqc");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("o313");
+/* harmony import */ var _styles_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_module_scss__WEBPACK_IMPORTED_MODULE_3__);
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+
+function SmallNews({
+  id
+}) {
+  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: `/news/${id}`
+  }, __jsx("a", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.smallnews
+  }, __jsx("img", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_0___default()(_styles_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.smallnews__img, 'border-radius'),
+    src: "/almaty.png",
+    alt: "#"
+  }), __jsx("div", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.smallnews_content
+  }, __jsx("div", {
+    className: "flex"
+  }, __jsx("img", {
+    src: "/eye.svg",
+    alt: "#"
+  }), __jsx("span", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.smallnews_view
+  }, "222")), __jsx("p", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.smallnews_text
+  }, "\u0411\u043E\u043B\u0435\u0435 20 \u043D\u043E\u0432\u044B\u0445 \u0442\u0443\u0440\u043E\u0431\u044A\u0435\u043A\u0442\u043E\u0432 \u043F\u043E\u044F\u0432\u044F\u0442\u0441\u044F \u0432 \u0410\u043B\u043C\u0430\u0442\u0438\u043D\u0441\u043A\u043E\u0439 \u043E\u0431\u043B\u0430\u0441\u0442\u0438 \u0434\u043E \u043A\u043E\u043D\u0446\u0430 \u0433\u043E\u0434\u0430"), __jsx("span", {
+    className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.smallnews_data
+  }, "21.09.2020"))));
+}
+
+/***/ }),
+
+/***/ "cDcd":
 /***/ (function(module, exports) {
 
 module.exports = require("react");
 
+/***/ }),
+
+/***/ "cTJO":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireWildcard = __webpack_require__("7KCV");
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(__webpack_require__("cDcd"));
+
+var _router = __webpack_require__("elyg");
+
+var _router2 = __webpack_require__("nOHt");
+
+let cachedObserver;
+const listeners = new Map();
+const IntersectionObserver = false ? undefined : null;
+const prefetched = {};
+
+function getObserver() {
+  // Return shared instance of IntersectionObserver if already created
+  if (cachedObserver) {
+    return cachedObserver;
+  } // Only create shared IntersectionObserver if supported in browser
+
+
+  if (!IntersectionObserver) {
+    return undefined;
+  }
+
+  return cachedObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!listeners.has(entry.target)) {
+        return;
+      }
+
+      const cb = listeners.get(entry.target);
+
+      if (entry.isIntersecting || entry.intersectionRatio > 0) {
+        cachedObserver.unobserve(entry.target);
+        listeners.delete(entry.target);
+        cb();
+      }
+    });
+  }, {
+    rootMargin: '200px'
+  });
+}
+
+const listenToIntersections = (el, cb) => {
+  const observer = getObserver();
+
+  if (!observer) {
+    return () => {};
+  }
+
+  observer.observe(el);
+  listeners.set(el, cb);
+  return () => {
+    try {
+      observer.unobserve(el);
+    } catch (err) {
+      console.error(err);
+    }
+
+    listeners.delete(el);
+  };
+};
+
+function prefetch(router, href, as, options) {
+  if (true) return;
+  if (!(0, _router.isLocalURL)(href)) return; // Prefetch the JSON page if asked (only in the client)
+  // We need to handle a prefetch error here since we may be
+  // loading with priority which can reject but we don't
+  // want to force navigation since this is only a prefetch
+
+  router.prefetch(href, as, options).catch(err => {
+    if (false) {}
+  }); // Join on an invalid URI character
+
+  prefetched[href + '%' + as] = true;
+}
+
+function isModifiedEvent(event) {
+  const {
+    target
+  } = event.currentTarget;
+  return target && target !== '_self' || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || // triggers resource download
+  event.nativeEvent && event.nativeEvent.which === 2;
+}
+
+function linkClicked(e, router, href, as, replace, shallow, scroll) {
+  const {
+    nodeName
+  } = e.currentTarget;
+
+  if (nodeName === 'A' && (isModifiedEvent(e) || !(0, _router.isLocalURL)(href))) {
+    // ignore click for browser’s default behavior
+    return;
+  }
+
+  e.preventDefault(); //  avoid scroll for urls with anchor refs
+
+  if (scroll == null) {
+    scroll = as.indexOf('#') < 0;
+  } // replace state instead of push if prop is present
+
+
+  router[replace ? 'replace' : 'push'](href, as, {
+    shallow
+  }).then(success => {
+    if (!success) return;
+
+    if (scroll) {
+      window.scrollTo(0, 0);
+      document.body.focus();
+    }
+  });
+}
+
+function Link(props) {
+  if (false) {}
+
+  const p = props.prefetch !== false;
+
+  const [childElm, setChildElm] = _react.default.useState();
+
+  const router = (0, _router2.useRouter)();
+  const pathname = router && router.pathname || '/';
+
+  const {
+    href,
+    as
+  } = _react.default.useMemo(() => {
+    const resolvedHref = (0, _router.resolveHref)(pathname, props.href);
+    return {
+      href: resolvedHref,
+      as: props.as ? (0, _router.resolveHref)(pathname, props.as) : resolvedHref
+    };
+  }, [pathname, props.href, props.as]);
+
+  _react.default.useEffect(() => {
+    if (p && IntersectionObserver && childElm && childElm.tagName && (0, _router.isLocalURL)(href)) {
+      // Join on an invalid URI character
+      const isPrefetched = prefetched[href + '%' + as];
+
+      if (!isPrefetched) {
+        return listenToIntersections(childElm, () => {
+          prefetch(router, href, as);
+        });
+      }
+    }
+  }, [p, childElm, href, as, router]);
+
+  let {
+    children,
+    replace,
+    shallow,
+    scroll
+  } = props; // Deprecated. Warning shown by propType check. If the children provided is a string (<Link>example</Link>) we wrap it in an <a> tag
+
+  if (typeof children === 'string') {
+    children = /*#__PURE__*/_react.default.createElement("a", null, children);
+  } // This will return the first child, if multiple are provided it will throw an error
+
+
+  const child = _react.Children.only(children);
+
+  const childProps = {
+    ref: el => {
+      if (el) setChildElm(el);
+
+      if (child && typeof child === 'object' && child.ref) {
+        if (typeof child.ref === 'function') child.ref(el);else if (typeof child.ref === 'object') {
+          child.ref.current = el;
+        }
+      }
+    },
+    onClick: e => {
+      if (child.props && typeof child.props.onClick === 'function') {
+        child.props.onClick(e);
+      }
+
+      if (!e.defaultPrevented) {
+        linkClicked(e, router, href, as, replace, shallow, scroll);
+      }
+    }
+  };
+
+  if (p) {
+    childProps.onMouseEnter = e => {
+      if (!(0, _router.isLocalURL)(href)) return;
+
+      if (child.props && typeof child.props.onMouseEnter === 'function') {
+        child.props.onMouseEnter(e);
+      }
+
+      prefetch(router, href, as, {
+        priority: true
+      });
+    };
+  } // If child is an <a> tag and doesn't have a href attribute, or if the 'passHref' property is
+  // defined, we specify the current 'href', so that repetition is not needed by the user
+
+
+  if (props.passHref || child.type === 'a' && !('href' in child.props)) {
+    childProps.href = (0, _router.addBasePath)(as);
+  }
+
+  return /*#__PURE__*/_react.default.cloneElement(child, childProps);
+}
+
+var _default = Link;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "dYMV":
+/***/ (function(module, exports) {
+
+module.exports = require("clsx");
+
+/***/ }),
+
+/***/ "dZ6Y":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = mitt;
+/*
+MIT License
+Copyright (c) Jason Miller (https://jasonformat.com/)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+// This file is based on https://github.com/developit/mitt/blob/v1.1.3/src/index.js
+// It's been edited for the needs of this script
+// See the LICENSE at the top of the file
+
+function mitt() {
+  const all = Object.create(null);
+  return {
+    on(type, handler) {
+      ;
+      (all[type] || (all[type] = [])).push(handler);
+    },
+
+    off(type, handler) {
+      if (all[type]) {
+        all[type].splice(all[type].indexOf(handler) >>> 0, 1);
+      }
+    },
+
+    emit(type, ...evts) {
+      // eslint-disable-next-line array-callback-return
+      ;
+      (all[type] || []).slice().map(handler => {
+        handler(...evts);
+      });
+    }
+
+  };
+}
+
+/***/ }),
+
+/***/ "elyg":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.hasBasePath = hasBasePath;
+exports.addBasePath = addBasePath;
+exports.delBasePath = delBasePath;
+exports.isLocalURL = isLocalURL;
+exports.resolveHref = resolveHref;
+exports.markLoadingError = markLoadingError;
+exports.default = void 0;
+
+var _normalizeTrailingSlash = __webpack_require__("X24+");
+
+var _denormalizePagePath = __webpack_require__("wkBG");
+
+var _mitt = _interopRequireDefault(__webpack_require__("dZ6Y"));
+
+var _utils = __webpack_require__("g/15");
+
+var _isDynamic = __webpack_require__("/jkW");
+
+var _parseRelativeUrl = __webpack_require__("hS4m");
+
+var _querystring = __webpack_require__("3WeD");
+
+var _resolveRewrites = _interopRequireDefault(__webpack_require__("S3md"));
+
+var _routeMatcher = __webpack_require__("gguc");
+
+var _routeRegex = __webpack_require__("YTqd");
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
+/* global __NEXT_DATA__ */
+// tslint:disable:no-console
+
+
+const basePath =  false || '';
+
+function buildCancellationError() {
+  return Object.assign(new Error('Route Cancelled'), {
+    cancelled: true
+  });
+}
+
+function hasBasePath(path) {
+  return path === basePath || path.startsWith(basePath + '/');
+}
+
+function addBasePath(path) {
+  // we only add the basepath on relative urls
+  return basePath && path.startsWith('/') ? path === '/' ? (0, _normalizeTrailingSlash.normalizePathTrailingSlash)(basePath) : basePath + path : path;
+}
+
+function delBasePath(path) {
+  return path.slice(basePath.length) || '/';
+}
+/**
+* Detects whether a given url is routable by the Next.js router (browser only).
+*/
+
+
+function isLocalURL(url) {
+  if (url.startsWith('/')) return true;
+
+  try {
+    // absolute urls can be local if they are on the same origin
+    const locationOrigin = (0, _utils.getLocationOrigin)();
+    const resolved = new URL(url, locationOrigin);
+    return resolved.origin === locationOrigin && hasBasePath(resolved.pathname);
+  } catch (_) {
+    return false;
+  }
+}
+/**
+* Resolves a given hyperlink with a certain router state (basePath not included).
+* Preserves absolute urls.
+*/
+
+
+function resolveHref(currentPath, href) {
+  // we use a dummy base url for relative urls
+  const base = new URL(currentPath, 'http://n');
+  const urlAsString = typeof href === 'string' ? href : (0, _utils.formatWithValidation)(href);
+
+  try {
+    const finalUrl = new URL(urlAsString, base);
+    finalUrl.pathname = (0, _normalizeTrailingSlash.normalizePathTrailingSlash)(finalUrl.pathname); // if the origin didn't change, it means we received a relative href
+
+    return finalUrl.origin === base.origin ? finalUrl.href.slice(finalUrl.origin.length) : finalUrl.href;
+  } catch (_) {
+    return urlAsString;
+  }
+}
+
+const PAGE_LOAD_ERROR = Symbol('PAGE_LOAD_ERROR');
+
+function markLoadingError(err) {
+  return Object.defineProperty(err, PAGE_LOAD_ERROR, {});
+}
+
+function prepareUrlAs(router, url, as) {
+  // If url and as provided as an object representation,
+  // we'll format them into the string version here.
+  return {
+    url: addBasePath(resolveHref(router.pathname, url)),
+    as: as ? addBasePath(resolveHref(router.pathname, as)) : as
+  };
+}
+
+const manualScrollRestoration =  false && false;
+
+function fetchRetry(url, attempts) {
+  return fetch(url, {
+    // Cookies are required to be present for Next.js' SSG "Preview Mode".
+    // Cookies may also be required for `getServerSideProps`.
+    //
+    // > `fetch` won’t send cookies, unless you set the credentials init
+    // > option.
+    // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    //
+    // > For maximum browser compatibility when it comes to sending &
+    // > receiving cookies, always supply the `credentials: 'same-origin'`
+    // > option instead of relying on the default.
+    // https://github.com/github/fetch#caveats
+    credentials: 'same-origin'
+  }).then(res => {
+    if (!res.ok) {
+      if (attempts > 1 && res.status >= 500) {
+        return fetchRetry(url, attempts - 1);
+      }
+
+      throw new Error(`Failed to load static props`);
+    }
+
+    return res.json();
+  });
+}
+
+function fetchNextData(dataHref, isServerRender) {
+  return fetchRetry(dataHref, isServerRender ? 3 : 1).catch(err => {
+    // We should only trigger a server-side transition if this was caused
+    // on a client-side transition. Otherwise, we'd get into an infinite
+    // loop.
+    if (!isServerRender) {
+      markLoadingError(err);
+    }
+
+    throw err;
+  });
+}
+
+class Router {
+  /**
+  * Map of all components loaded in `Router`
+  */
+  // Static Data Cache
+  constructor(_pathname, _query, _as, {
+    initialProps,
+    pageLoader,
+    App,
+    wrapApp,
+    Component,
+    initialStyleSheets,
+    err,
+    subscription,
+    isFallback
+  }) {
+    this.route = void 0;
+    this.pathname = void 0;
+    this.query = void 0;
+    this.asPath = void 0;
+    this.basePath = void 0;
+    this.components = void 0;
+    this.sdc = {};
+    this.sub = void 0;
+    this.clc = void 0;
+    this.pageLoader = void 0;
+    this._bps = void 0;
+    this.events = void 0;
+    this._wrapApp = void 0;
+    this.isSsr = void 0;
+    this.isFallback = void 0;
+    this._inFlightRoute = void 0;
+    this._shallow = void 0;
+
+    this.onPopState = e => {
+      const state = e.state;
+
+      if (!state) {
+        // We get state as undefined for two reasons.
+        //  1. With older safari (< 8) and older chrome (< 34)
+        //  2. When the URL changed with #
+        //
+        // In the both cases, we don't need to proceed and change the route.
+        // (as it's already changed)
+        // But we can simply replace the state with the new changes.
+        // Actually, for (1) we don't need to nothing. But it's hard to detect that event.
+        // So, doing the following for (1) does no harm.
+        const {
+          pathname,
+          query
+        } = this;
+        this.changeState('replaceState', (0, _utils.formatWithValidation)({
+          pathname: addBasePath(pathname),
+          query
+        }), (0, _utils.getURL)());
+        return;
+      }
+
+      if (!state.__N) {
+        return;
+      }
+
+      const {
+        url,
+        as,
+        options
+      } = state;
+      const {
+        pathname
+      } = (0, _parseRelativeUrl.parseRelativeUrl)(url); // Make sure we don't re-render on initial load,
+      // can be caused by navigating back from an external site
+
+      if (this.isSsr && as === this.asPath && pathname === this.pathname) {
+        return;
+      } // If the downstream application returns falsy, return.
+      // They will then be responsible for handling the event.
+
+
+      if (this._bps && !this._bps(state)) {
+        return;
+      }
+
+      this.change('replaceState', url, as, Object.assign({}, options, {
+        shallow: options.shallow && this._shallow
+      }));
+    }; // represents the current component key
+
+
+    this.route = (0, _normalizeTrailingSlash.removePathTrailingSlash)(_pathname); // set up the component cache (by route keys)
+
+    this.components = {}; // We should not keep the cache, if there's an error
+    // Otherwise, this cause issues when when going back and
+    // come again to the errored page.
+
+    if (_pathname !== '/_error') {
+      this.components[this.route] = {
+        Component,
+        styleSheets: initialStyleSheets,
+        props: initialProps,
+        err,
+        __N_SSG: initialProps && initialProps.__N_SSG,
+        __N_SSP: initialProps && initialProps.__N_SSP
+      };
+    }
+
+    this.components['/_app'] = {
+      Component: App,
+      styleSheets: [
+        /* /_app does not need its stylesheets managed */
+      ]
+    }; // Backwards compat for Router.router.events
+    // TODO: Should be remove the following major version as it was never documented
+
+    this.events = Router.events;
+    this.pageLoader = pageLoader;
+    this.pathname = _pathname;
+    this.query = _query; // if auto prerendered and dynamic route wait to update asPath
+    // until after mount to prevent hydration mismatch
+
+    this.asPath = // @ts-ignore this is temporarily global (attached to window)
+    (0, _isDynamic.isDynamicRoute)(_pathname) && __NEXT_DATA__.autoExport ? _pathname : _as;
+    this.basePath = basePath;
+    this.sub = subscription;
+    this.clc = null;
+    this._wrapApp = wrapApp; // make sure to ignore extra popState in safari on navigating
+    // back from external site
+
+    this.isSsr = true;
+    this.isFallback = isFallback;
+
+    if (false) {}
+  }
+
+  reload() {
+    window.location.reload();
+  }
+  /**
+  * Go back in history
+  */
+
+
+  back() {
+    window.history.back();
+  }
+  /**
+  * Performs a `pushState` with arguments
+  * @param url of the route
+  * @param as masks `url` for the browser
+  * @param options object you can define `shallow` and other options
+  */
+
+
+  push(url, as = url, options = {}) {
+    ;
+    ({
+      url,
+      as
+    } = prepareUrlAs(this, url, as));
+    return this.change('pushState', url, as, options);
+  }
+  /**
+  * Performs a `replaceState` with arguments
+  * @param url of the route
+  * @param as masks `url` for the browser
+  * @param options object you can define `shallow` and other options
+  */
+
+
+  replace(url, as = url, options = {}) {
+    ;
+    ({
+      url,
+      as
+    } = prepareUrlAs(this, url, as));
+    return this.change('replaceState', url, as, options);
+  }
+
+  async change(method, url, as, options) {
+    if (!isLocalURL(url)) {
+      window.location.href = url;
+      return false;
+    }
+
+    if (!options._h) {
+      this.isSsr = false;
+    } // marking route changes as a navigation start entry
+
+
+    if (_utils.ST) {
+      performance.mark('routeChange');
+    }
+
+    if (this._inFlightRoute) {
+      this.abortComponentLoad(this._inFlightRoute);
+    }
+
+    const cleanedAs = hasBasePath(as) ? delBasePath(as) : as;
+    this._inFlightRoute = as; // If the url change is only related to a hash change
+    // We should not proceed. We should only change the state.
+    // WARNING: `_h` is an internal option for handing Next.js client-side
+    // hydration. Your app should _never_ use this property. It may change at
+    // any time without notice.
+
+    if (!options._h && this.onlyAHashChange(cleanedAs)) {
+      this.asPath = cleanedAs;
+      Router.events.emit('hashChangeStart', as); // TODO: do we need the resolved href when only a hash change?
+
+      this.changeState(method, url, as, options);
+      this.scrollToHash(cleanedAs);
+      this.notify(this.components[this.route]);
+      Router.events.emit('hashChangeComplete', as);
+      return true;
+    } // The build manifest needs to be loaded before auto-static dynamic pages
+    // get their query parameters to allow ensuring they can be parsed properly
+    // when rewritten to
+
+
+    const pages = await this.pageLoader.getPageList();
+    const {
+      __rewrites: rewrites
+    } = await this.pageLoader.promisedBuildManifest;
+    let parsed = (0, _parseRelativeUrl.parseRelativeUrl)(url);
+    let {
+      pathname,
+      searchParams
+    } = parsed;
+    parsed = this._resolveHref(parsed, pages);
+
+    if (parsed.pathname !== pathname) {
+      pathname = parsed.pathname;
+      url = (0, _utils.formatWithValidation)(parsed);
+    }
+
+    const query = (0, _querystring.searchParamsToUrlQuery)(searchParams); // url and as should always be prefixed with basePath by this
+    // point by either next/link or router.push/replace so strip the
+    // basePath from the pathname to match the pages dir 1-to-1
+
+    pathname = pathname ? (0, _normalizeTrailingSlash.removePathTrailingSlash)(delBasePath(pathname)) : pathname; // If asked to change the current URL we should reload the current page
+    // (not location.reload() but reload getInitialProps and other Next.js stuffs)
+    // We also need to set the method = replaceState always
+    // as this should not go into the history (That's how browsers work)
+    // We should compare the new asPath to the current asPath, not the url
+
+    if (!this.urlIsNew(cleanedAs)) {
+      method = 'replaceState';
+    }
+
+    const route = (0, _normalizeTrailingSlash.removePathTrailingSlash)(pathname);
+    const {
+      shallow = false
+    } = options; // we need to resolve the as value using rewrites for dynamic SSG
+    // pages to allow building the data URL correctly
+
+    let resolvedAs = as;
+
+    if (false) {}
+
+    resolvedAs = delBasePath(resolvedAs);
+
+    if ((0, _isDynamic.isDynamicRoute)(route)) {
+      const {
+        pathname: asPathname
+      } = (0, _parseRelativeUrl.parseRelativeUrl)(resolvedAs);
+      const routeRegex = (0, _routeRegex.getRouteRegex)(route);
+      const routeMatch = (0, _routeMatcher.getRouteMatcher)(routeRegex)(asPathname);
+
+      if (!routeMatch) {
+        const missingParams = Object.keys(routeRegex.groups).filter(param => !query[param]);
+
+        if (missingParams.length > 0) {
+          if (false) {}
+
+          throw new Error(`The provided \`as\` value (${asPathname}) is incompatible with the \`href\` value (${route}). ` + `Read more: https://err.sh/vercel/next.js/incompatible-href-as`);
+        }
+      } else {
+        // Merge params into `query`, overwriting any specified in search
+        Object.assign(query, routeMatch);
+      }
+    }
+
+    Router.events.emit('routeChangeStart', as);
+
+    try {
+      const routeInfo = await this.getRouteInfo(route, pathname, query, as, shallow);
+      let {
+        error
+      } = routeInfo;
+      Router.events.emit('beforeHistoryChange', as);
+      this.changeState(method, url, as, options);
+
+      if (false) {}
+
+      await this.set(route, pathname, query, cleanedAs, routeInfo).catch(e => {
+        if (e.cancelled) error = error || e;else throw e;
+      });
+
+      if (error) {
+        Router.events.emit('routeChangeError', error, cleanedAs);
+        throw error;
+      }
+
+      if (false) {}
+
+      Router.events.emit('routeChangeComplete', as);
+      return true;
+    } catch (err) {
+      if (err.cancelled) {
+        return false;
+      }
+
+      throw err;
+    }
+  }
+
+  changeState(method, url, as, options = {}) {
+    if (false) {}
+
+    if (method !== 'pushState' || (0, _utils.getURL)() !== as) {
+      this._shallow = options.shallow;
+      window.history[method]({
+        url,
+        as,
+        options,
+        __N: true
+      }, // Most browsers currently ignores this parameter, although they may use it in the future.
+      // Passing the empty string here should be safe against future changes to the method.
+      // https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
+      '', as);
+    }
+  }
+
+  async handleRouteInfoError(err, pathname, query, as, loadErrorFail) {
+    if (err.cancelled) {
+      // bubble up cancellation errors
+      throw err;
+    }
+
+    if (PAGE_LOAD_ERROR in err || loadErrorFail) {
+      Router.events.emit('routeChangeError', err, as); // If we can't load the page it could be one of following reasons
+      //  1. Page doesn't exists
+      //  2. Page does exist in a different zone
+      //  3. Internal error while loading the page
+      // So, doing a hard reload is the proper way to deal with this.
+
+      window.location.href = as; // Changing the URL doesn't block executing the current code path.
+      // So let's throw a cancellation error stop the routing logic.
+
+      throw buildCancellationError();
+    }
+
+    try {
+      const {
+        page: Component,
+        styleSheets
+      } = await this.fetchComponent('/_error');
+      const routeInfo = {
+        Component,
+        styleSheets,
+        err,
+        error: err
+      };
+
+      try {
+        routeInfo.props = await this.getInitialProps(Component, {
+          err,
+          pathname,
+          query
+        });
+      } catch (gipErr) {
+        console.error('Error in error page `getInitialProps`: ', gipErr);
+        routeInfo.props = {};
+      }
+
+      return routeInfo;
+    } catch (routeInfoErr) {
+      return this.handleRouteInfoError(routeInfoErr, pathname, query, as, true);
+    }
+  }
+
+  async getRouteInfo(route, pathname, query, as, shallow = false) {
+    try {
+      const cachedRouteInfo = this.components[route];
+
+      if (shallow && cachedRouteInfo && this.route === route) {
+        return cachedRouteInfo;
+      }
+
+      const routeInfo = cachedRouteInfo ? cachedRouteInfo : await this.fetchComponent(route).then(res => ({
+        Component: res.page,
+        styleSheets: res.styleSheets,
+        __N_SSG: res.mod.__N_SSG,
+        __N_SSP: res.mod.__N_SSP
+      }));
+      const {
+        Component,
+        __N_SSG,
+        __N_SSP
+      } = routeInfo;
+
+      if (false) {}
+
+      let dataHref;
+
+      if (__N_SSG || __N_SSP) {
+        dataHref = this.pageLoader.getDataHref((0, _utils.formatWithValidation)({
+          pathname,
+          query
+        }), delBasePath(as), __N_SSG);
+      }
+
+      const props = await this._getData(() => __N_SSG ? this._getStaticData(dataHref) : __N_SSP ? this._getServerData(dataHref) : this.getInitialProps(Component, // we provide AppTree later so this needs to be `any`
+      {
+        pathname,
+        query,
+        asPath: as
+      }));
+      routeInfo.props = props;
+      this.components[route] = routeInfo;
+      return routeInfo;
+    } catch (err) {
+      return this.handleRouteInfoError(err, pathname, query, as);
+    }
+  }
+
+  set(route, pathname, query, as, data) {
+    this.isFallback = false;
+    this.route = route;
+    this.pathname = pathname;
+    this.query = query;
+    this.asPath = as;
+    return this.notify(data);
+  }
+  /**
+  * Callback to execute before replacing router state
+  * @param cb callback to be executed
+  */
+
+
+  beforePopState(cb) {
+    this._bps = cb;
+  }
+
+  onlyAHashChange(as) {
+    if (!this.asPath) return false;
+    const [oldUrlNoHash, oldHash] = this.asPath.split('#');
+    const [newUrlNoHash, newHash] = as.split('#'); // Makes sure we scroll to the provided hash if the url/hash are the same
+
+    if (newHash && oldUrlNoHash === newUrlNoHash && oldHash === newHash) {
+      return true;
+    } // If the urls are change, there's more than a hash change
+
+
+    if (oldUrlNoHash !== newUrlNoHash) {
+      return false;
+    } // If the hash has changed, then it's a hash only change.
+    // This check is necessary to handle both the enter and
+    // leave hash === '' cases. The identity case falls through
+    // and is treated as a next reload.
+
+
+    return oldHash !== newHash;
+  }
+
+  scrollToHash(as) {
+    const [, hash] = as.split('#'); // Scroll to top if the hash is just `#` with no value
+
+    if (hash === '') {
+      window.scrollTo(0, 0);
+      return;
+    } // First we check if the element by id is found
+
+
+    const idEl = document.getElementById(hash);
+
+    if (idEl) {
+      idEl.scrollIntoView();
+      return;
+    } // If there's no element with the id, we check the `name` property
+    // To mirror browsers
+
+
+    const nameEl = document.getElementsByName(hash)[0];
+
+    if (nameEl) {
+      nameEl.scrollIntoView();
+    }
+  }
+
+  urlIsNew(asPath) {
+    return this.asPath !== asPath;
+  }
+
+  _resolveHref(parsedHref, pages) {
+    const {
+      pathname
+    } = parsedHref;
+    const cleanPathname = (0, _denormalizePagePath.denormalizePagePath)(delBasePath(pathname));
+
+    if (cleanPathname === '/404' || cleanPathname === '/_error') {
+      return parsedHref;
+    } // handle resolving href for dynamic routes
+
+
+    if (!pages.includes(cleanPathname)) {
+      // eslint-disable-next-line array-callback-return
+      pages.some(page => {
+        if ((0, _isDynamic.isDynamicRoute)(page) && (0, _routeRegex.getRouteRegex)(page).re.test(cleanPathname)) {
+          parsedHref.pathname = addBasePath(page);
+          return true;
+        }
+      });
+    }
+
+    return parsedHref;
+  }
+  /**
+  * Prefetch page code, you may wait for the data during page rendering.
+  * This feature only works in production!
+  * @param url the href of prefetched page
+  * @param asPath the as path of the prefetched page
+  */
+
+
+  async prefetch(url, asPath = url, options = {}) {
+    let parsed = (0, _parseRelativeUrl.parseRelativeUrl)(url);
+    let {
+      pathname
+    } = parsed;
+    const pages = await this.pageLoader.getPageList();
+    parsed = this._resolveHref(parsed, pages);
+
+    if (parsed.pathname !== pathname) {
+      pathname = parsed.pathname;
+      url = (0, _utils.formatWithValidation)(parsed);
+    } // Prefetch is not supported in development mode because it would trigger on-demand-entries
+
+
+    if (false) {}
+
+    const route = (0, _normalizeTrailingSlash.removePathTrailingSlash)(pathname);
+    await Promise.all([this.pageLoader.prefetchData(url, asPath), this.pageLoader[options.priority ? 'loadPage' : 'prefetch'](route)]);
+  }
+
+  async fetchComponent(route) {
+    let cancelled = false;
+
+    const cancel = this.clc = () => {
+      cancelled = true;
+    };
+
+    const componentResult = await this.pageLoader.loadPage(route);
+
+    if (cancelled) {
+      const error = new Error(`Abort fetching component for route: "${route}"`);
+      error.cancelled = true;
+      throw error;
+    }
+
+    if (cancel === this.clc) {
+      this.clc = null;
+    }
+
+    return componentResult;
+  }
+
+  _getData(fn) {
+    let cancelled = false;
+
+    const cancel = () => {
+      cancelled = true;
+    };
+
+    this.clc = cancel;
+    return fn().then(data => {
+      if (cancel === this.clc) {
+        this.clc = null;
+      }
+
+      if (cancelled) {
+        const err = new Error('Loading initial props cancelled');
+        err.cancelled = true;
+        throw err;
+      }
+
+      return data;
+    });
+  }
+
+  _getStaticData(dataHref) {
+    const {
+      href: cacheKey
+    } = new URL(dataHref, window.location.href);
+
+    if ( true && this.sdc[cacheKey]) {
+      return Promise.resolve(this.sdc[cacheKey]);
+    }
+
+    return fetchNextData(dataHref, this.isSsr).then(data => {
+      this.sdc[cacheKey] = data;
+      return data;
+    });
+  }
+
+  _getServerData(dataHref) {
+    return fetchNextData(dataHref, this.isSsr);
+  }
+
+  getInitialProps(Component, ctx) {
+    const {
+      Component: App
+    } = this.components['/_app'];
+
+    const AppTree = this._wrapApp(App);
+
+    ctx.AppTree = AppTree;
+    return (0, _utils.loadGetInitialProps)(App, {
+      AppTree,
+      Component,
+      router: this,
+      ctx
+    });
+  }
+
+  abortComponentLoad(as) {
+    if (this.clc) {
+      Router.events.emit('routeChangeError', buildCancellationError(), as);
+      this.clc();
+      this.clc = null;
+    }
+  }
+
+  notify(data) {
+    return this.sub(data, this.components['/_app'].Component);
+  }
+
+}
+
+exports.default = Router;
+Router.events = (0, _mitt.default)();
+
+/***/ }),
+
+/***/ "g/15":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.execOnce = execOnce;
+exports.getLocationOrigin = getLocationOrigin;
+exports.getURL = getURL;
+exports.getDisplayName = getDisplayName;
+exports.isResSent = isResSent;
+exports.loadGetInitialProps = loadGetInitialProps;
+exports.formatWithValidation = formatWithValidation;
+exports.ST = exports.SP = exports.urlObjectKeys = void 0;
+
+var _formatUrl = __webpack_require__("6D7l");
+/**
+* Utils
+*/
+
+
+function execOnce(fn) {
+  let used = false;
+  let result;
+  return (...args) => {
+    if (!used) {
+      used = true;
+      result = fn(...args);
+    }
+
+    return result;
+  };
+}
+
+function getLocationOrigin() {
+  const {
+    protocol,
+    hostname,
+    port
+  } = window.location;
+  return `${protocol}//${hostname}${port ? ':' + port : ''}`;
+}
+
+function getURL() {
+  const {
+    href
+  } = window.location;
+  const origin = getLocationOrigin();
+  return href.substring(origin.length);
+}
+
+function getDisplayName(Component) {
+  return typeof Component === 'string' ? Component : Component.displayName || Component.name || 'Unknown';
+}
+
+function isResSent(res) {
+  return res.finished || res.headersSent;
+}
+
+async function loadGetInitialProps(App, ctx) {
+  if (false) { var _App$prototype; } // when called from _app `ctx` is nested in `ctx`
+
+
+  const res = ctx.res || ctx.ctx && ctx.ctx.res;
+
+  if (!App.getInitialProps) {
+    if (ctx.ctx && ctx.Component) {
+      // @ts-ignore pageProps default
+      return {
+        pageProps: await loadGetInitialProps(ctx.Component, ctx.ctx)
+      };
+    }
+
+    return {};
+  }
+
+  const props = await App.getInitialProps(ctx);
+
+  if (res && isResSent(res)) {
+    return props;
+  }
+
+  if (!props) {
+    const message = `"${getDisplayName(App)}.getInitialProps()" should resolve to an object. But found "${props}" instead.`;
+    throw new Error(message);
+  }
+
+  if (false) {}
+
+  return props;
+}
+
+const urlObjectKeys = ['auth', 'hash', 'host', 'hostname', 'href', 'path', 'pathname', 'port', 'protocol', 'query', 'search', 'slashes'];
+exports.urlObjectKeys = urlObjectKeys;
+
+function formatWithValidation(url) {
+  if (false) {}
+
+  return (0, _formatUrl.formatUrl)(url);
+}
+
+const SP = typeof performance !== 'undefined';
+exports.SP = SP;
+const ST = SP && typeof performance.mark === 'function' && typeof performance.measure === 'function';
+exports.ST = ST;
+
+/***/ }),
+
+/***/ "gguc":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.getRouteMatcher = getRouteMatcher;
+
+function getRouteMatcher(routeRegex) {
+  const {
+    re,
+    groups
+  } = routeRegex;
+  return pathname => {
+    const routeMatch = re.exec(pathname);
+
+    if (!routeMatch) {
+      return false;
+    }
+
+    const decode = param => {
+      try {
+        return decodeURIComponent(param);
+      } catch (_) {
+        const err = new Error('failed to decode param');
+        err.code = 'DECODE_FAILED';
+        throw err;
+      }
+    };
+
+    const params = {};
+    Object.keys(groups).forEach(slugName => {
+      const g = groups[slugName];
+      const m = routeMatch[g.pos];
+
+      if (m !== undefined) {
+        params[slugName] = ~m.indexOf('/') ? m.split('/').map(entry => decode(entry)) : g.repeat ? [decode(m)] : decode(m);
+      }
+    });
+    return params;
+  };
+}
+
+/***/ }),
+
+/***/ "hS4m":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.parseRelativeUrl = parseRelativeUrl;
+
+var _utils = __webpack_require__("g/15");
+
+const DUMMY_BASE = new URL(true ? 'http://n' : undefined);
+/**
+* Parses path-relative urls (e.g. `/hello/world?foo=bar`). If url isn't path-relative
+* (e.g. `./hello`) then at least base must be.
+* Absolute urls are rejected with one exception, in the browser, absolute urls that are on
+* the current origin will be parsed as relative
+*/
+
+function parseRelativeUrl(url, base) {
+  const resolvedBase = base ? new URL(base, DUMMY_BASE) : DUMMY_BASE;
+  const {
+    pathname,
+    searchParams,
+    search,
+    hash,
+    href,
+    origin,
+    protocol
+  } = new URL(url, resolvedBase);
+
+  if (origin !== DUMMY_BASE.origin || protocol !== 'http:' && protocol !== 'https:') {
+    throw new Error('invariant: invalid relative URL');
+  }
+
+  return {
+    pathname,
+    searchParams,
+    search,
+    hash,
+    href: href.slice(DUMMY_BASE.origin.length)
+  };
+}
+
+/***/ }),
+
+/***/ "k7Sn":
+/***/ (function(module, exports, __webpack_require__) {
+
+const NextI18Next = __webpack_require__("6f9I").default;
+
+const {
+  localeSubpaths
+} = __webpack_require__("KNus").default().publicRuntimeConfig;
+
+const path = __webpack_require__("oyvS");
+
+module.exports = new NextI18Next({
+  defaultLanguage: 'ru',
+  fallbackLng: 'ru',
+  otherLanguages: ['kz', 'ru'],
+  localeSubpaths,
+  shallowRender: true,
+  localePath: path.resolve('./public/static')
+});
+
+/***/ }),
+
+/***/ "nOHt":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireWildcard = __webpack_require__("7KCV");
+
+var _interopRequireDefault = __webpack_require__("AroE");
+
+exports.__esModule = true;
+exports.useRouter = useRouter;
+exports.makePublicRouterInstance = makePublicRouterInstance;
+exports.createRouter = exports.withRouter = exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__("cDcd"));
+
+var _router2 = _interopRequireWildcard(__webpack_require__("elyg"));
+
+exports.Router = _router2.default;
+exports.NextRouter = _router2.NextRouter;
+
+var _routerContext = __webpack_require__("Osoz");
+
+var _withRouter = _interopRequireDefault(__webpack_require__("0Bsm"));
+
+exports.withRouter = _withRouter.default;
+/* global window */
+
+const singletonRouter = {
+  router: null,
+  // holds the actual router instance
+  readyCallbacks: [],
+
+  ready(cb) {
+    if (this.router) return cb();
+
+    if (false) {}
+  }
+
+}; // Create public properties and methods of the router in the singletonRouter
+
+const urlPropertyFields = ['pathname', 'route', 'query', 'asPath', 'components', 'isFallback', 'basePath'];
+const routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
+const coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
+
+Object.defineProperty(singletonRouter, 'events', {
+  get() {
+    return _router2.default.events;
+  }
+
+});
+urlPropertyFields.forEach(field => {
+  // Here we need to use Object.defineProperty because, we need to return
+  // the property assigned to the actual router
+  // The value might get changed as we change routes and this is the
+  // proper way to access it
+  Object.defineProperty(singletonRouter, field, {
+    get() {
+      const router = getRouter();
+      return router[field];
+    }
+
+  });
+});
+coreMethodFields.forEach(field => {
+  // We don't really know the types here, so we add them later instead
+  ;
+
+  singletonRouter[field] = (...args) => {
+    const router = getRouter();
+    return router[field](...args);
+  };
+});
+routerEvents.forEach(event => {
+  singletonRouter.ready(() => {
+    _router2.default.events.on(event, (...args) => {
+      const eventField = `on${event.charAt(0).toUpperCase()}${event.substring(1)}`;
+      const _singletonRouter = singletonRouter;
+
+      if (_singletonRouter[eventField]) {
+        try {
+          _singletonRouter[eventField](...args);
+        } catch (err) {
+          console.error(`Error when running the Router event: ${eventField}`);
+          console.error(`${err.message}\n${err.stack}`);
+        }
+      }
+    });
+  });
+});
+
+function getRouter() {
+  if (!singletonRouter.router) {
+    const message = 'No router instance found.\n' + 'You should only use "next/router" inside the client side of your app.\n';
+    throw new Error(message);
+  }
+
+  return singletonRouter.router;
+} // Export the singletonRouter and this is the public API.
+
+
+var _default = singletonRouter; // Reexport the withRoute HOC
+
+exports.default = _default;
+
+function useRouter() {
+  return _react.default.useContext(_routerContext.RouterContext);
+} // INTERNAL APIS
+// -------------
+// (do not use following exports inside the app)
+// Create a router and assign it as the singleton instance.
+// This is used in client side when we are initilizing the app.
+// This should **not** use inside the server.
+
+
+const createRouter = (...args) => {
+  singletonRouter.router = new _router2.default(...args);
+  singletonRouter.readyCallbacks.forEach(cb => cb());
+  singletonRouter.readyCallbacks = [];
+  return singletonRouter.router;
+}; // This function is used to create the `withRouter` router instance
+
+
+exports.createRouter = createRouter;
+
+function makePublicRouterInstance(router) {
+  const _router = router;
+  const instance = {};
+
+  for (const property of urlPropertyFields) {
+    if (typeof _router[property] === 'object') {
+      instance[property] = Object.assign({}, _router[property]); // makes sure query is not stateful
+
+      continue;
+    }
+
+    instance[property] = _router[property];
+  } // Events is a static property on the router, the router doesn't have to be initialized to use it
+
+
+  instance.events = _router2.default.events;
+  coreMethodFields.forEach(field => {
+    instance[field] = (...args) => {
+      return _router[field](...args);
+    };
+  });
+  return instance;
+}
+
+/***/ }),
+
+/***/ "o313":
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"smallnews": "styles_smallnews__2cH15",
+	"smallnews__img": "styles_smallnews__img__U3zDL",
+	"smallnews_view": "styles_smallnews_view__2tgCW",
+	"smallnews_text": "styles_smallnews_text__1sbTI",
+	"smallnews_data": "styles_smallnews_data__1FvZF"
+};
+
+
+/***/ }),
+
+/***/ "oyvS":
+/***/ (function(module, exports) {
+
+module.exports = require("path");
+
+/***/ }),
+
+/***/ "wkBG":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denormalizePagePath=denormalizePagePath;function normalizePathSep(path){return path.replace(/\\/g,'/');}function denormalizePagePath(page){page=normalizePathSep(page);if(page.startsWith('/index/')){page=page.slice(6);}else if(page==='/index'){page='/';}return page;}
+//# sourceMappingURL=denormalize-page-path.js.map
+
+/***/ }),
+
+/***/ "xnum":
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
+
 /***/ })
 
 /******/ });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vd2VicGFjay9ib290c3RyYXAiLCJ3ZWJwYWNrOi8vLy4vc3JjL3BhZ2VzL25ld3MvLmpzIiwid2VicGFjazovLy9leHRlcm5hbCBcInJlYWN0XCIiXSwibmFtZXMiOlsiaW5zaWRlTmV3cyJdLCJtYXBwaW5ncyI6Ijs7UUFBQTtRQUNBOztRQUVBO1FBQ0E7O1FBRUE7UUFDQTtRQUNBO1FBQ0E7UUFDQTtRQUNBO1FBQ0E7UUFDQTtRQUNBO1FBQ0E7O1FBRUE7UUFDQTtRQUNBO1FBQ0E7UUFDQTtRQUNBLElBQUk7UUFDSjtRQUNBOztRQUVBO1FBQ0E7O1FBRUE7UUFDQTtRQUNBOzs7UUFHQTtRQUNBOztRQUVBO1FBQ0E7O1FBRUE7UUFDQTtRQUNBO1FBQ0EsMENBQTBDLGdDQUFnQztRQUMxRTtRQUNBOztRQUVBO1FBQ0E7UUFDQTtRQUNBLHdEQUF3RCxrQkFBa0I7UUFDMUU7UUFDQSxpREFBaUQsY0FBYztRQUMvRDs7UUFFQTtRQUNBO1FBQ0E7UUFDQTtRQUNBO1FBQ0E7UUFDQTtRQUNBO1FBQ0E7UUFDQTtRQUNBO1FBQ0EseUNBQXlDLGlDQUFpQztRQUMxRSxnSEFBZ0gsbUJBQW1CLEVBQUU7UUFDckk7UUFDQTs7UUFFQTtRQUNBO1FBQ0E7UUFDQSwyQkFBMkIsMEJBQTBCLEVBQUU7UUFDdkQsaUNBQWlDLGVBQWU7UUFDaEQ7UUFDQTtRQUNBOztRQUVBO1FBQ0Esc0RBQXNELCtEQUErRDs7UUFFckg7UUFDQTs7O1FBR0E7UUFDQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUN4RmUsU0FBU0EsVUFBVCxHQUFzQjtBQUNuQyxTQUNFO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsa0JBREY7QUFHRCxDOzs7Ozs7Ozs7OztBQ0pELGtDIiwiZmlsZSI6InBhZ2VzL25ld3MvW2lkXS5qcyIsInNvdXJjZXNDb250ZW50IjpbIiBcdC8vIFRoZSBtb2R1bGUgY2FjaGVcbiBcdHZhciBpbnN0YWxsZWRNb2R1bGVzID0gcmVxdWlyZSgnLi4vLi4vc3NyLW1vZHVsZS1jYWNoZS5qcycpO1xuXG4gXHQvLyBUaGUgcmVxdWlyZSBmdW5jdGlvblxuIFx0ZnVuY3Rpb24gX193ZWJwYWNrX3JlcXVpcmVfXyhtb2R1bGVJZCkge1xuXG4gXHRcdC8vIENoZWNrIGlmIG1vZHVsZSBpcyBpbiBjYWNoZVxuIFx0XHRpZihpbnN0YWxsZWRNb2R1bGVzW21vZHVsZUlkXSkge1xuIFx0XHRcdHJldHVybiBpbnN0YWxsZWRNb2R1bGVzW21vZHVsZUlkXS5leHBvcnRzO1xuIFx0XHR9XG4gXHRcdC8vIENyZWF0ZSBhIG5ldyBtb2R1bGUgKGFuZCBwdXQgaXQgaW50byB0aGUgY2FjaGUpXG4gXHRcdHZhciBtb2R1bGUgPSBpbnN0YWxsZWRNb2R1bGVzW21vZHVsZUlkXSA9IHtcbiBcdFx0XHRpOiBtb2R1bGVJZCxcbiBcdFx0XHRsOiBmYWxzZSxcbiBcdFx0XHRleHBvcnRzOiB7fVxuIFx0XHR9O1xuXG4gXHRcdC8vIEV4ZWN1dGUgdGhlIG1vZHVsZSBmdW5jdGlvblxuIFx0XHR2YXIgdGhyZXcgPSB0cnVlO1xuIFx0XHR0cnkge1xuIFx0XHRcdG1vZHVsZXNbbW9kdWxlSWRdLmNhbGwobW9kdWxlLmV4cG9ydHMsIG1vZHVsZSwgbW9kdWxlLmV4cG9ydHMsIF9fd2VicGFja19yZXF1aXJlX18pO1xuIFx0XHRcdHRocmV3ID0gZmFsc2U7XG4gXHRcdH0gZmluYWxseSB7XG4gXHRcdFx0aWYodGhyZXcpIGRlbGV0ZSBpbnN0YWxsZWRNb2R1bGVzW21vZHVsZUlkXTtcbiBcdFx0fVxuXG4gXHRcdC8vIEZsYWcgdGhlIG1vZHVsZSBhcyBsb2FkZWRcbiBcdFx0bW9kdWxlLmwgPSB0cnVlO1xuXG4gXHRcdC8vIFJldHVybiB0aGUgZXhwb3J0cyBvZiB0aGUgbW9kdWxlXG4gXHRcdHJldHVybiBtb2R1bGUuZXhwb3J0cztcbiBcdH1cblxuXG4gXHQvLyBleHBvc2UgdGhlIG1vZHVsZXMgb2JqZWN0IChfX3dlYnBhY2tfbW9kdWxlc19fKVxuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5tID0gbW9kdWxlcztcblxuIFx0Ly8gZXhwb3NlIHRoZSBtb2R1bGUgY2FjaGVcbiBcdF9fd2VicGFja19yZXF1aXJlX18uYyA9IGluc3RhbGxlZE1vZHVsZXM7XG5cbiBcdC8vIGRlZmluZSBnZXR0ZXIgZnVuY3Rpb24gZm9yIGhhcm1vbnkgZXhwb3J0c1xuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5kID0gZnVuY3Rpb24oZXhwb3J0cywgbmFtZSwgZ2V0dGVyKSB7XG4gXHRcdGlmKCFfX3dlYnBhY2tfcmVxdWlyZV9fLm8oZXhwb3J0cywgbmFtZSkpIHtcbiBcdFx0XHRPYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgbmFtZSwgeyBlbnVtZXJhYmxlOiB0cnVlLCBnZXQ6IGdldHRlciB9KTtcbiBcdFx0fVxuIFx0fTtcblxuIFx0Ly8gZGVmaW5lIF9fZXNNb2R1bGUgb24gZXhwb3J0c1xuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5yID0gZnVuY3Rpb24oZXhwb3J0cykge1xuIFx0XHRpZih0eXBlb2YgU3ltYm9sICE9PSAndW5kZWZpbmVkJyAmJiBTeW1ib2wudG9TdHJpbmdUYWcpIHtcbiBcdFx0XHRPYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgU3ltYm9sLnRvU3RyaW5nVGFnLCB7IHZhbHVlOiAnTW9kdWxlJyB9KTtcbiBcdFx0fVxuIFx0XHRPYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgJ19fZXNNb2R1bGUnLCB7IHZhbHVlOiB0cnVlIH0pO1xuIFx0fTtcblxuIFx0Ly8gY3JlYXRlIGEgZmFrZSBuYW1lc3BhY2Ugb2JqZWN0XG4gXHQvLyBtb2RlICYgMTogdmFsdWUgaXMgYSBtb2R1bGUgaWQsIHJlcXVpcmUgaXRcbiBcdC8vIG1vZGUgJiAyOiBtZXJnZSBhbGwgcHJvcGVydGllcyBvZiB2YWx1ZSBpbnRvIHRoZSBuc1xuIFx0Ly8gbW9kZSAmIDQ6IHJldHVybiB2YWx1ZSB3aGVuIGFscmVhZHkgbnMgb2JqZWN0XG4gXHQvLyBtb2RlICYgOHwxOiBiZWhhdmUgbGlrZSByZXF1aXJlXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLnQgPSBmdW5jdGlvbih2YWx1ZSwgbW9kZSkge1xuIFx0XHRpZihtb2RlICYgMSkgdmFsdWUgPSBfX3dlYnBhY2tfcmVxdWlyZV9fKHZhbHVlKTtcbiBcdFx0aWYobW9kZSAmIDgpIHJldHVybiB2YWx1ZTtcbiBcdFx0aWYoKG1vZGUgJiA0KSAmJiB0eXBlb2YgdmFsdWUgPT09ICdvYmplY3QnICYmIHZhbHVlICYmIHZhbHVlLl9fZXNNb2R1bGUpIHJldHVybiB2YWx1ZTtcbiBcdFx0dmFyIG5zID0gT2JqZWN0LmNyZWF0ZShudWxsKTtcbiBcdFx0X193ZWJwYWNrX3JlcXVpcmVfXy5yKG5zKTtcbiBcdFx0T2JqZWN0LmRlZmluZVByb3BlcnR5KG5zLCAnZGVmYXVsdCcsIHsgZW51bWVyYWJsZTogdHJ1ZSwgdmFsdWU6IHZhbHVlIH0pO1xuIFx0XHRpZihtb2RlICYgMiAmJiB0eXBlb2YgdmFsdWUgIT0gJ3N0cmluZycpIGZvcih2YXIga2V5IGluIHZhbHVlKSBfX3dlYnBhY2tfcmVxdWlyZV9fLmQobnMsIGtleSwgZnVuY3Rpb24oa2V5KSB7IHJldHVybiB2YWx1ZVtrZXldOyB9LmJpbmQobnVsbCwga2V5KSk7XG4gXHRcdHJldHVybiBucztcbiBcdH07XG5cbiBcdC8vIGdldERlZmF1bHRFeHBvcnQgZnVuY3Rpb24gZm9yIGNvbXBhdGliaWxpdHkgd2l0aCBub24taGFybW9ueSBtb2R1bGVzXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLm4gPSBmdW5jdGlvbihtb2R1bGUpIHtcbiBcdFx0dmFyIGdldHRlciA9IG1vZHVsZSAmJiBtb2R1bGUuX19lc01vZHVsZSA/XG4gXHRcdFx0ZnVuY3Rpb24gZ2V0RGVmYXVsdCgpIHsgcmV0dXJuIG1vZHVsZVsnZGVmYXVsdCddOyB9IDpcbiBcdFx0XHRmdW5jdGlvbiBnZXRNb2R1bGVFeHBvcnRzKCkgeyByZXR1cm4gbW9kdWxlOyB9O1xuIFx0XHRfX3dlYnBhY2tfcmVxdWlyZV9fLmQoZ2V0dGVyLCAnYScsIGdldHRlcik7XG4gXHRcdHJldHVybiBnZXR0ZXI7XG4gXHR9O1xuXG4gXHQvLyBPYmplY3QucHJvdG90eXBlLmhhc093blByb3BlcnR5LmNhbGxcbiBcdF9fd2VicGFja19yZXF1aXJlX18ubyA9IGZ1bmN0aW9uKG9iamVjdCwgcHJvcGVydHkpIHsgcmV0dXJuIE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbChvYmplY3QsIHByb3BlcnR5KTsgfTtcblxuIFx0Ly8gX193ZWJwYWNrX3B1YmxpY19wYXRoX19cbiBcdF9fd2VicGFja19yZXF1aXJlX18ucCA9IFwiXCI7XG5cblxuIFx0Ly8gTG9hZCBlbnRyeSBtb2R1bGUgYW5kIHJldHVybiBleHBvcnRzXG4gXHRyZXR1cm4gX193ZWJwYWNrX3JlcXVpcmVfXyhfX3dlYnBhY2tfcmVxdWlyZV9fLnMgPSBcIi4vc3JjL3BhZ2VzL25ld3MvW2lkXS5qc1wiKTtcbiIsImV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIGluc2lkZU5ld3MoKSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxoMT5pbnNpZGVOZXdzPC9oMT5cclxuICApXHJcbn0iLCJtb2R1bGUuZXhwb3J0cyA9IHJlcXVpcmUoXCJyZWFjdFwiKTsiXSwic291cmNlUm9vdCI6IiJ9

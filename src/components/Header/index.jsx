@@ -4,8 +4,10 @@ import {useRouter} from 'next/router'
 import styles from './styles.module.scss'
 import clsx from 'clsx'
 
+import { withTranslation, i18n } from '../../../i18n'
 
-function Header() {
+
+function Header({t}) {
 
   const router = useRouter()
   const [visiblePopup, setVisiblePopup] = React.useState(false);
@@ -14,6 +16,11 @@ function Header() {
 
   const allLang = ['ru', 'kz']
   const activeLang = allLang[activeItem]
+  
+  const changeLang = () => {
+    i18n.changeLanguage(activeLang);
+  }
+  
 
   const toggleVisible = () => {
     setVisiblePopup(!visiblePopup)
@@ -48,7 +55,7 @@ function Header() {
           </a>
         </Link>
         <Link href="/">
-          <a className={router.pathname == '/' ? styles.active : ''}>Главная</a>
+          <a className={router.pathname == '/' ? styles.active : ''}>{t('main')}</a>
         </Link>
         <Link href="/news">
           <a className={router.pathname == '/news' ? styles.active : ''}>Новости</a>
@@ -69,7 +76,7 @@ function Header() {
               {allLang &&
                 allLang.map((name, index) => (
                   <li
-                    onClick={() => activeItem !== index ? onSelectItem(index) : ''}
+                    onClick={() => activeItem !== index ? onSelectItem(index) : '', changeLang}
                     className={clsx(activeItem === index ? styles.active : '')}
                     key={index}>
                     {name}
@@ -89,4 +96,5 @@ function Header() {
 
 }
 
-export default Header
+
+export default withTranslation('header')(Header)

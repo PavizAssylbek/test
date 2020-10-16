@@ -6,8 +6,10 @@ import MainNews from '../components/MainNews'
 import MainProject from '../components/MainProject'
 import MainWebinars from '../components/MainWebinars'
 
+import { withTranslation } from '../../i18n'
 
-export default function Home() {
+
+const Home = ({t}) => {
   return (
     <MainLayout>
       <Head>
@@ -26,3 +28,9 @@ export default function Home() {
     </MainLayout>
   )
 }
+
+Home.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+})
+
+export default withTranslation('common')(Home)

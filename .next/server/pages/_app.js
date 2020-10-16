@@ -108,10 +108,163 @@ module.exports = __webpack_require__("IlR1");
 
 /***/ }),
 
+/***/ "6f9I":
+/***/ (function(module, exports) {
+
+module.exports = require("next-i18next");
+
+/***/ }),
+
 /***/ "6w4r":
 /***/ (function(module, exports) {
 
 
+
+/***/ }),
+
+/***/ "8Bbg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("B5Ud")
+
+
+/***/ }),
+
+/***/ "AroE":
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+
+/***/ }),
+
+/***/ "B5Ud":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__("AroE");
+
+exports.__esModule = true;
+exports.Container = Container;
+exports.createUrl = createUrl;
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__("cDcd"));
+
+var _utils = __webpack_require__("kYf9");
+
+exports.AppInitialProps = _utils.AppInitialProps;
+exports.NextWebVitalsMetric = _utils.NextWebVitalsMetric;
+/**
+* `App` component is used for initialize of pages. It allows for overwriting and full control of the `page` initialization.
+* This allows for keeping state between navigation, custom error handling, injecting additional data.
+*/
+
+async function appGetInitialProps({
+  Component,
+  ctx
+}) {
+  const pageProps = await (0, _utils.loadGetInitialProps)(Component, ctx);
+  return {
+    pageProps
+  };
+}
+
+class App extends _react.default.Component {
+  // Kept here for backwards compatibility.
+  // When someone ended App they could call `super.componentDidCatch`.
+  // @deprecated This method is no longer needed. Errors are caught at the top level
+  componentDidCatch(error, _errorInfo) {
+    throw error;
+  }
+
+  render() {
+    const {
+      router,
+      Component,
+      pageProps,
+      __N_SSG,
+      __N_SSP
+    } = this.props;
+    return /*#__PURE__*/_react.default.createElement(Component, Object.assign({}, pageProps, // we don't add the legacy URL prop if it's using non-legacy
+    // methods like getStaticProps and getServerSideProps
+    !(__N_SSG || __N_SSP) ? {
+      url: createUrl(router)
+    } : {}));
+  }
+
+}
+
+exports.default = App;
+App.origGetInitialProps = appGetInitialProps;
+App.getInitialProps = appGetInitialProps;
+let warnContainer;
+let warnUrl;
+
+if (false) {} // @deprecated noop for now until removal
+
+
+function Container(p) {
+  if (false) {}
+  return p.children;
+}
+
+function createUrl(router) {
+  // This is to make sure we don't references the router object at call time
+  const {
+    pathname,
+    asPath,
+    query
+  } = router;
+  return {
+    get query() {
+      if (false) {}
+      return query;
+    },
+
+    get pathname() {
+      if (false) {}
+      return pathname;
+    },
+
+    get asPath() {
+      if (false) {}
+      return asPath;
+    },
+
+    back: () => {
+      if (false) {}
+      router.back();
+    },
+    push: (url, as) => {
+      if (false) {}
+      return router.push(url, as);
+    },
+    pushTo: (href, as) => {
+      if (false) {}
+      const pushRoute = as ? href : '';
+      const pushUrl = as || href;
+      return router.push(pushRoute, pushUrl);
+    },
+    replace: (url, as) => {
+      if (false) {}
+      return router.replace(url, as);
+    },
+    replaceTo: (href, as) => {
+      if (false) {}
+      const replaceRoute = as ? href : '';
+      const replaceUrl = as || href;
+      return router.replace(replaceRoute, replaceUrl);
+    }
+  };
+}
 
 /***/ }),
 
@@ -122,12 +275,25 @@ module.exports = __webpack_require__("IlR1");
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_globals_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("6w4r");
-/* harmony import */ var _styles_globals_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("4l1m");
-/* harmony import */ var swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_2__);
-
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("8Bbg");
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("k7Sn");
+/* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_globals_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("6w4r");
+/* harmony import */ var _styles_globals_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("4l1m");
+/* harmony import */ var swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_4__);
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
 
 
 
@@ -138,7 +304,19 @@ function MyApp({
   return __jsx(Component, pageProps);
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (MyApp);
+MyApp.getInitialProps = async appContext => {
+  const appProps = await next_app__WEBPACK_IMPORTED_MODULE_1___default.a.getInitialProps(appContext);
+  return _objectSpread({}, appProps);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_i18n__WEBPACK_IMPORTED_MODULE_2__["appWithTranslation"])(MyApp));
+
+/***/ }),
+
+/***/ "KNus":
+/***/ (function(module, exports) {
+
+module.exports = require("next/config");
 
 /***/ }),
 
@@ -146,6 +324,42 @@ function MyApp({
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "k7Sn":
+/***/ (function(module, exports, __webpack_require__) {
+
+const NextI18Next = __webpack_require__("6f9I").default;
+
+const {
+  localeSubpaths
+} = __webpack_require__("KNus").default().publicRuntimeConfig;
+
+const path = __webpack_require__("oyvS");
+
+module.exports = new NextI18Next({
+  defaultLanguage: 'ru',
+  fallbackLng: 'ru',
+  otherLanguages: ['kz', 'ru'],
+  localeSubpaths,
+  shallowRender: true,
+  localePath: path.resolve('./public/static')
+});
+
+/***/ }),
+
+/***/ "kYf9":
+/***/ (function(module, exports) {
+
+module.exports = require("next/dist/next-server/lib/utils.js");
+
+/***/ }),
+
+/***/ "oyvS":
+/***/ (function(module, exports) {
+
+module.exports = require("path");
 
 /***/ })
 
