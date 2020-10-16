@@ -1,0 +1,26 @@
+.layout {
+  
+  &_content {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_link {
+    margin-right: 60px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 13px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  footer {
+    margin-top: auto;
+    background-color: #F4F9FF;
+  }
+}

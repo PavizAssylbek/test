@@ -6,7 +6,7 @@
   --color-purple: #263159;
   --color-yellow: #FFDD15;
 
-  --font-gothampro: GothamPro, Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  --font-gothampro: GothamPro, GothamProItalic, Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --font-roboto: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -19,7 +19,7 @@ body {
   font-family: var(--font-gothampro);
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
-  color: var(--color-purple)
+  color: var(--color-purple);
 }
 
 a {
@@ -45,10 +45,103 @@ a {
   border-radius: 20px;
 }
 
+.adminText {
+  margin: 0;
+  margin-top: 35px;
+  margin-bottom: 40px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 23px;
+}
+
+.submit {
+  cursor: pointer;
+  background-color: var(--color-yellow);
+}
+
+.footer-top {
+  margin-top: 90px;
+  background-color: #FAFCFF;
+
+  &_flex {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-auto-rows: 100px;
+
+    .flex {
+      align-items: center;
+      padding-right: 30px;
+      border-right: 1px solid #F4F4F4;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 15px;
+
+      &:last-child {
+        border: none;
+      }
+
+      img {
+        margin-right: 20px;
+      }
+
+      &:not(:first-child) {
+        img {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #FAFCFF;
+  
+  &-flex {
+    width: 93%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+
+    @media (max-width: 425px) {
+      display: none;
+    }
+  }
+  &-links {
+    a {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 13px;
+      margin-right: 60px;
+      transition: .3s ease-in-out;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        color: var(--color-blue);
+      }
+    }
+  }
+}
+
 .content {
   width: 94%;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(180deg, #fff 20%, #E4FDFF 80%);
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 }
 
 @font-face {
@@ -59,7 +152,7 @@ a {
   font-display: swap;
 }
 @font-face {
-  font-family: "GothamPro";
+  font-family: "GothamProItalic";
   src: url("../assets/fonts/GothamPro-Italic.ttf");
   font-weight: 100;
   font-style: italic;
@@ -73,7 +166,7 @@ a {
   font-display: swap;
 }
 @font-face {
-  font-family: "GothamPro";
+  font-family: "GothamProItalic";
   src: url("../assets/fonts/GothamPro-LightItalic.ttf");
   font-weight: 300;
   font-style: italic;
@@ -118,7 +211,7 @@ a {
   font-display: swap;
 }
 @font-face {
-  font-family: "GothamPro";
+  font-family: "GothamProItalic";
   src: url("../assets/fonts/GothamPro-BoldItalic.ttf");
   font-weight: 700;
   font-style: italic;

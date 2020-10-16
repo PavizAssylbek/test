@@ -14,12 +14,24 @@ export default function MainProject() {
       <div className={clsx(styles.main_project_head, 'container')}>
         <h2>Проекты</h2>
         <div className={styles.main_project_sort}>
-          <span className={styles.main_project_active}>Kazakh Tourism</span>
-          <span>Travel-дайджесты</span>
-          <span>Мнения экспертов</span>
+          <Link href={'/project'}>
+              <a>
+                Kazakh Tourism
+              </a>
+            </Link>
+            <Link href={'/'}>
+              <a>
+                Travel-дайджесты
+              </a>
+            </Link>
+            <Link href={'/project/extrim'}>
+              <a>
+                Мнения экспертов
+              </a>
+            </Link>
         </div>
         <Link href="/project">
-          <a className={styles.main_project_link}>Все публикации <img src="/front.png" alt="back"/></a>
+          <a className={styles.main_project_link}><span>Все публикации</span> <img src="/front.png" alt="back"/></a>
         </Link>
       </div>
       <Swiper

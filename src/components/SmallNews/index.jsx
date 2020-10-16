@@ -8,7 +8,7 @@ export default function SmallNews({id}) {
   return (
     <Link href={`/news/${id}`}>
       <a className={styles.smallnews}>
-      <img className={clsx(styles.smallnews__img, 'border-radius')} src="almaty.png" alt="#"/>
+      <img className={clsx(styles.smallnews__img, 'border-radius')} src="/almaty.png" alt="#"/>
       <div className={styles.smallnews_content}>
         <div className="flex">
           <img src="/eye.svg" alt="#"/>

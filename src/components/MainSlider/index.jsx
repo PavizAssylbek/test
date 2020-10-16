@@ -19,31 +19,37 @@ const MainSlider = () => {
       <div className={styles.main_slider_wrapper}>
         <Swiper
           speed={1000}
-          slidesPerView={1}
+          spaceBetween={30}
+          slidesPerView='auto'
           navigation={{nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'}}
         >
-          <SwiperSlide className={styles.main_slider_flex}>
+          <SwiperSlide className={styles.main_slider_grid}>
             <MainSliderItem 
               images={<img src='/slide1.png' alt='slide1' />} 
+              bool={false}
               text="Объединяет участников единой коммуникационной платформой"
-            />
-            <MainSliderItem 
-              images={<img src='/slide2.png' alt='slide2' />} 
-              text="Формирует лучший клиентский опыт"
             />
           </SwiperSlide>
-
-          <SwiperSlide className={styles.main_slider_flex}>
+          <SwiperSlide className={styles.main_slider_grid}>
+            <MainSliderItem 
+                images={<img src='/slide2.png' alt='slide2' />}
+                bool={true}
+                text="Формирует лучший клиентский опыт"
+              />
+          </SwiperSlide>
+          <SwiperSlide className={styles.main_slider_grid}>
             <MainSliderItem 
               images={<img src='/slide1.png' alt='slide1' />} 
+              bool={false}
               text="Объединяет участников единой коммуникационной платформой"
-              bg="#1AB7E2;"
             />
+          </SwiperSlide>
+          <SwiperSlide className={styles.main_slider_grid}>
             <MainSliderItem 
-              images={<img src='/slide2.png' alt='slide2' />} 
-              text="Формирует лучший клиентский опыт"
-              bg="#2FCFD7;"
-            />
+                images={<img src='/slide2.png' alt='slide2' />} 
+                bool={true}
+                text="Формирует лучший клиентский опыт"
+              />
           </SwiperSlide>
           <div className={styles.main_slider_buttons}>
             <div className={clsx(styles.main_slider_prev, "swiper-button-prev")}>

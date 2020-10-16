@@ -1,11 +1,13 @@
 import clsx from 'clsx'
 import React from 'react'
+import Link from 'next/link'
 import styles from './styles.module.scss'
 
-export default function SmallWebinars({finish}) {
+export default function SmallWebinars({finish, id}) {
 
   return (
-    <div className={clsx(styles.smallwebinars, 'border-radius')}>
+    <Link href={`/webinars/${id}`}>
+      <a className={clsx(styles.smallwebinars, 'border-radius')}>
       <img className={styles.smallwebinars_img} src="/people.png" alt="#"/>
       <div className={styles.smallwebinars_content}>
         <div>
@@ -24,7 +26,8 @@ export default function SmallWebinars({finish}) {
         )}
         <p className={styles.smallwebinars_text}>Семейный отдых в стиле Blue Diamond</p>
       </div>
-    </div>
+    </a>
+    </Link>
   )
 
 

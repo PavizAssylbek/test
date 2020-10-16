@@ -10,7 +10,7 @@ export default function MainNews() {
       <div className={styles.main_news_head}>
         <h2>Новости туристической отрасли</h2>
         <Link href="/news">
-          <a className={styles.main_news_link}>Все новости <img src="/front.png" alt="back"/></a>
+          <a className={styles.main_news_link}><span>Все новости</span> <img src="/front.png" alt="back"/></a>
         </Link>
       </div>
       <div className={styles.main_news_grid}>

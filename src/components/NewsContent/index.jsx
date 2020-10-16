@@ -10,7 +10,7 @@ export default function NewsContent() {
       <div className={styles.newscontent_head}>
         <h2>Новости туристической отрасли</h2>
         <Link href="/">
-          <a className={styles.newscontent_link}>Назад <img src="/back.png" alt="back"/></a>
+          <a className={styles.newscontent_link}><span>Назад</span> <img src="/back.png" alt="back"/></a>
         </Link>
       </div>
       <div className={styles.newscontent_grid}>

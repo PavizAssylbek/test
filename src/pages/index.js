@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <MainLayout>
       <Head>
-        <title>Tourism</title>
+        <title>Tourism: Online</title>
       </Head>
 
       <MainSlider />

@@ -1,0 +1,29 @@
+.layout {
+  background: linear-gradient(180deg, #fff 50%, #E4FDFF 50%);
+
+  &_content {
+    height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_img {
+    margin-right: auto;
+  }
+
+  &_link {
+    margin-right: 60px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 13px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

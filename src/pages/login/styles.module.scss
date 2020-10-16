@@ -1,0 +1,87 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h6 {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 34px;
+  }
+
+  &_active {
+    color: var(--color-blue);
+  }
+
+  &_btn {
+    margin: 30px 0;
+    display: flex;
+
+    button {
+      cursor: pointer;
+      margin-right: 30px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 23px;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &_bg {
+    background-color: var(--color-blue);
+    padding: 38px 35px;
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_download {
+    width: 100%;
+    background-color: var(--color-yellow);
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    
+    div {
+      display: flex;
+      align-items: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 17px;
+
+      img {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  &_forgot {
+    color: #fff;
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 13px;
+    margin-bottom: 25px;
+  }
+
+  &_reg {
+    color: #fff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 17px;
+  }
+}

@@ -3,19 +3,35 @@ import Link from 'next/link'
 import SmallProject from '../SmallProject'
 import styles from './styles.module.scss'
 import clsx from 'clsx'
+import { useRouter } from 'next/router'
 
 export default function ProjectContent() {
+
+  const router = useRouter()
+
   return (
     <div className={clsx(styles.project_content, 'container')}>
       <div className={styles.project_content_head}>
         <h2>Проекты</h2>
         <div className={styles.project_content_sort}>
-          <span className={styles.project_content_active}>Kazakh Tourism</span>
-          <span>Travel-дайджесты</span>
-          <span>Мнения экспертов</span>
+          <Link href={'/project'}>
+            <a className={router.pathname == '/project' ? styles.project_content_active : ''}>
+              Kazakh Tourism
+            </a>
+          </Link>
+          <Link href={'/'}>
+            <a className={router.pathname == '/' ? styles.project_content_active : ''}>
+              Travel-дайджесты
+            </a>
+          </Link>
+          <Link href={'/project/extrim'}>
+            <a className={router.pathname == '/project/extrim' ? styles.project_content_active : ''}>
+              Мнения экспертов
+            </a>
+          </Link>
         </div>
         <Link href="/">
-          <a className={styles.project_content_link}>Назад <img src="/back.png" alt="back"/></a>
+          <a className={styles.project_content_link}><span>Назад</span> <img src="/back.png" alt="back"/></a>
         </Link>
       </div>
       <div className={styles.project_content_grid}>
