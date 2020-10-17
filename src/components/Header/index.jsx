@@ -1,26 +1,20 @@
 import React from 'react'
-import Link from 'next/link'
+import { Link } from '../../../i18n'
 import {useRouter} from 'next/router'
+import { I18nContext } from 'next-i18next'
+import { withTranslation, i18n } from '../../../i18n'
+
 import styles from './styles.module.scss'
 import clsx from 'clsx'
-
-import { withTranslation, i18n } from '../../../i18n'
 
 
 function Header({t}) {
 
   const router = useRouter()
   const [visiblePopup, setVisiblePopup] = React.useState(false);
-  const [activeItem, setActiveItem] = React.useState(0);
   const langRef = React.useRef()
+  const { i18n: { language } } = React.useContext(I18nContext)
 
-  const allLang = ['ru', 'kz']
-  const activeLang = allLang[activeItem]
-  
-  const changeLang = () => {
-    i18n.changeLanguage(activeLang);
-  }
-  
 
   const toggleVisible = () => {
     setVisiblePopup(!visiblePopup)
@@ -39,8 +33,8 @@ function Header({t}) {
     }
   }, [])
 
-  const onSelectItem = id => {
-    setActiveItem(id)
+  const onSelectItem = (lang) => {
+    i18n.changeLanguage(lang)
     setVisiblePopup(false)
   }
 
@@ -70,19 +64,21 @@ function Header({t}) {
           <a className={styles.header_bold}>Войти <img src="/login.svg" alt="login" /></a>
         </Link>
         <div ref={langRef} className={styles.header_lang}>
-          <span onClick={toggleVisible}>{activeLang} <img src="/dd.svg" alt="#"/></span>
+          <span onClick={toggleVisible}>{language} <img src="/dd.svg" alt="#"/></span>
           {visiblePopup && (
             <ul className={clsx(styles.header_langs, 'border-radius')}>
-              {allLang &&
-                allLang.map((name, index) => (
-                  <li
-                    onClick={() => activeItem !== index ? onSelectItem(index) : '', changeLang}
-                    className={clsx(activeItem === index ? styles.active : '')}
-                    key={index}>
-                    {name}
-                  </li>
-                ))
-              }
+              <li
+                onClick={() => language !== 'ru' ? onSelectItem('ru') : ''}
+                className={clsx(language === 'ru' ? styles.active : '')}
+                >
+                ru
+              </li>
+              <li
+                onClick={() => language !== 'kz' ? onSelectItem('kz') : ''}
+                className={clsx(language === 'kz' ? styles.active : '')}
+                >
+                kz
+              </li>
             </ul>
           )}
         </div>
