@@ -47,6 +47,7 @@
     align-items: center;
 
     button {
+      cursor: pointer;
       margin-right: 15px;
       font-style: normal;
       font-weight: bold;
@@ -130,6 +131,7 @@
       width: 30%;
 
       label {
+        cursor: pointer;
         margin-top: 10px;
         display: flex;
         align-items: center;
@@ -238,6 +240,7 @@
   }
 
   &_submit {
+    cursor: pointer;
     margin-top: 40px;
     background-color: #1AB7E2;
     color: #fff;

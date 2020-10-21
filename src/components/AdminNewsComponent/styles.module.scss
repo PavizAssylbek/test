@@ -27,13 +27,16 @@
       font-size: 18px;
       line-height: 17px;
       color: var(--color-blue);
-      margin-right: auto;
-      margin-left: 40px;
 
       img {
         margin-right: 10px;
       }
     }
+  }
+
+  &_btn {
+    margin-right: auto;
+    margin-left: 40px;
   }
 
   &_link {
@@ -147,11 +150,6 @@
         outline: none;
         background-color: transparent;
         border: none;
-        color: var(--color-blue);
-
-        &:nth-child(2) {
-          color: #E84141;
-        }
       }
     }
 
@@ -173,5 +171,9 @@
 
   &_blue {
     color: var(--color-blue);
+  }
+
+  &_red {
+    color: #E84141;
   }
 }

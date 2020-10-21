@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import React from 'react'
-import Link from 'next/link'
+import { Link } from '../../../i18n'
 import styles from './styles.module.scss'
 
 export default function SmallWebinars({finish, id}) {

@@ -4,7 +4,7 @@ import AdminLayout from '../../../components/AdminLayout'
 import AdminNewsComponent from '../../../components/AdminNewsComponent'
 
 
-export default function AdminNews() {
+export default function AdminNews({data}) {
 
   return (
     <AdminLayout>
@@ -13,10 +13,23 @@ export default function AdminNews() {
       </Head>
           
         <div className="container">
-          <AdminNewsComponent title={'Новости'} smalltitle={'новость'} />
+          <AdminNewsComponent title={'Новости'} data={data.news} smalltitle={'новость'} />
         </div>
           
     </AdminLayout>
   )
+  
+}
 
+export async function getServerSideProps(context) {
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
+
+  const new_res = await fetch(`${BASE_URL}/api/news`)
+  const news = await new_res.json()
+
+  const data = {
+    news
+  }
+  
+  return { props: { data } }
 }

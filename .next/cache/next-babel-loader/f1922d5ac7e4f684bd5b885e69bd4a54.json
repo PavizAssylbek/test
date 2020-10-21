@@ -1,0 +1,1 @@
+{"ast":null,"code":"var NextI18Next = require('next-i18next')[\"default\"];\n\nvar path = require('path');\n\nmodule.exports = new NextI18Next({\n  defaultLanguage: 'ru',\n  otherLanguages: ['kz'],\n  localeSubpaths: {\n    kz: 'kz'\n  },\n  shallowRender: true,\n  localePath: path.resolve('./public/static')\n});","map":null,"metadata":{},"sourceType":"script"}

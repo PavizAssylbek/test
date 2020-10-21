@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import { Link } from '../../../i18n'
 import {useRouter} from 'next/router'
 
 import styles from './styles.module.scss'

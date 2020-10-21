@@ -1,7 +1,7 @@
 import React from 'react'
 import AdminSidebar from '../AdminSidebar'
 import AdminHeader from '../AdminHeader'
-import Link from 'next/link'
+import { Link } from '../../../i18n'
 
 
 import styles from './styles.module.scss'

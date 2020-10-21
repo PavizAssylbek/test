@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from '../Sidebar'
 import Header from '../Header'
-import Link from 'next/link'
+import { Link } from '../../../i18n'
 
 
 export default function MainLayout({children}) {

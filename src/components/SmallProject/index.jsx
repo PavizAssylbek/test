@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import React from 'react'
 import styles from './styles.module.scss'
-import Link from 'next/link'
+import { Link } from '../../../i18n'
 
 export default function SmallProject({id}) {
 

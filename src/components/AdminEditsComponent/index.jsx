@@ -6,12 +6,26 @@ import styles from './styles.module.scss'
 import clsx from 'clsx'
 
 
-export default function AdminEditsComponent({title = 'Title', link, save}) {
+export default function AdminEditsComponent({title = 'Title', link, save, data}) {
 
   const [visiblePopup, setVisiblePopup] = React.useState(true);
   const [activeItem, setActiveItem] = React.useState(0);
   const fileInput = React.createRef()
   const imgFile = React.createRef()
+
+  const [headerValueRu, setHeaderValueRu] = React.useState(data?.data?.heading_ru)
+  const [headerValueKz, setHeaderValueKz] = React.useState(data?.data?.heading_kz)
+
+  const [date, setDate] = React.useState(data?.data?.date)
+
+  const [descripRu, setDescripRu] = React.useState(data?.data?.description_ru)
+  const [descripKz, setDescripKz] = React.useState(data?.data?.description_kz)
+
+  const [contentRu, setContentRu] = React.useState(data?.data?.content_ru)
+  const [contentKz, setContentKz] = React.useState(data?.data?.content_kz)
+  
+  const [status, setStatus] = React.useState(data?.data?.status?.id)
+  const [photo, setPhoto] = React.useState(data?.data?.photo?.photo)
 
   const allLang = ['RU', 'KZ']
 
@@ -27,6 +41,19 @@ export default function AdminEditsComponent({title = 'Title', link, save}) {
       imgFile.current.src = e.target.result;
     };
     reader.readAsDataURL(fileInput.current.files[0]);
+  }
+
+  const statusChange = e =>{
+    if(e === 2) {
+      setStatus(1)
+    } else {
+      setStatus(2)
+    }
+  }
+
+
+  const postData = () => {
+    
   }
 
   return(
@@ -54,24 +81,34 @@ export default function AdminEditsComponent({title = 'Title', link, save}) {
             <div className={styles.edits_content__left}>
               <h2>Заголовок</h2>
               <label htmlFor="title">
-                <input type="text" id="title" placeholder="Название заголовок"/>
+                <input 
+                  onChange={e => setHeaderValueRu(e.target.value)}
+                  type="text"
+                  id="title" 
+                  placeholder="Название заголовок" 
+                  value={headerValueRu}/>
               </label>
               <h2>Дата</h2>
               <label htmlFor="data" className={styles.data}>
-                <InputMask id="data" mask="99.99.9999" />
+                <InputMask 
+                  id="data" 
+                  mask="9999.99.99" 
+                  value={date} 
+                  onChange={e => setDate(e.target.value)} 
+                />
               </label>
               <h2>Описание</h2>
               <label htmlFor="text" className={styles.text}>
-              <textarea id="text"></textarea>
+              <textarea id="text" value={descripRu} onChange={e => setDescripRu(e.target.value)}></textarea>
               </label>
               <h2>Содержимое</h2>
               <label htmlFor="textinfo" className={styles.textinfo}>
-                <textarea></textarea>
+                <textarea value={contentRu} onChange={e => setContentRu(e.target.value)}></textarea>
               </label>
             </div>
             <div className={styles.edits_content__right}>
               <h2>Главное изображение</h2>
-              <img ref={imgFile} className={styles.edits_newimg} src="" alt=""/>
+              <img ref={imgFile} className={styles.edits_newimg} src={`${process.env.NEXT_PUBLIC_BASE_URL}/storage/${photo}`} alt=""/>
               <label htmlFor="btn_file">
                 <img src="/btn_file.jpg" alt="#"/>
                 Добавить изображение
@@ -85,35 +122,41 @@ export default function AdminEditsComponent({title = 'Title', link, save}) {
             <div className={styles.edits_content__left}>
               <h2>Заголовок</h2>
               <label htmlFor="title">
-                <input type="text" id="title" placeholder="Название заголовок"/>
+                <input 
+                  value={headerValueKz}
+                  onChange={e => setHeaderValueKz(e.target.value)}
+                  type="text" 
+                  id="title" 
+                  placeholder="Название заголовок"  />
               </label>
               <h2>Дата</h2>
               <label htmlFor="data" className={styles.data}>
-                <InputMask id="data" mask="99.99.9999" />
+                <InputMask 
+                    id="data" 
+                    mask="9999.99.99" 
+                    value={date} 
+                    onChange={e => setDate(e.target.value)} 
+                  />
               </label>
               <h2>Описание</h2>
               <label htmlFor="text" className={styles.text}>
-              <textarea id="text"></textarea>
+              <textarea id="text" value={descripKz} onChange={e => setDescripKz(e.target.value)}></textarea>
               </label>
               <h2>Содержимое</h2>
               <label htmlFor="textinfo" className={styles.textinfo}>
-                <textarea></textarea>
-              </label>
-            </div>
-            <div className={styles.edits_content__right}>
-              <h2>Главное изображение</h2>
-              <img ref={imgFile} className={styles.edits_newimg} src="" alt=""/>
-              <label htmlFor="btn_file">
-                <img src="/btn_file.jpg" alt="#"/>
-                Добавить изображение
-                <input type="file" hidden id="btn_file" accept=".jpg, .jpeg, .png" ref={fileInput} onChange={addImgFile}/>
+                <textarea value={contentKz} onChange={e => setContentKz(e.target.value)}></textarea>
               </label>
             </div>
           </div>
         )
       }
       <div style={{marginBottom: "15px"}}>
-        <input type="checkbox" className={styles.edits_custom_checkbox} id="checkBox1" />
+        <input
+          onChange={() => statusChange(status)}
+          checked={status === 2 ? true : false}
+          type="checkbox" 
+          className={styles.edits_custom_checkbox} 
+          id="checkBox1" />
         <label className={styles.edits_checkbox} htmlFor="checkBox1">Опубликовать</label>
       </div>
       {save && (
@@ -122,11 +165,8 @@ export default function AdminEditsComponent({title = 'Title', link, save}) {
           <label className={styles.edits_checkbox} htmlFor="checkBox2">Сохранить вебинар на сайте после завершения</label>
       </div>
       )}
-      <input type="submit" value={'Соханить'} className={clsx(styles.edits_submit, 'border-radius')}/>
+      <input type="submit" value={'Соханить'} onClick={postData} className={clsx(styles.edits_submit, 'border-radius')}/>
       </form>
     </div>
   )
-
-
-
 }

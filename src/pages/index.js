@@ -9,7 +9,9 @@ import MainWebinars from '../components/MainWebinars'
 import { withTranslation } from '../../i18n'
 
 
-const Home = ({t}) => {
+const Home = ({t, data}) => {
+
+
   return (
     <MainLayout>
       <Head>
@@ -29,8 +31,23 @@ const Home = ({t}) => {
   )
 }
 
-Home.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'header'],
-})
+// Home.getInitialProps = async () => ({
+//   namespacesRequired: ['common', 'header'],
+// })
+
+
+
+export async function getServerSideProps(context) {
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
+
+  const res = await fetch(`${BASE_URL}/api/projects`)
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { 
+    data, 
+    namespacesRequired: ['common', 'header'] 
+  } }
+}
 
 export default withTranslation('common')(Home)
